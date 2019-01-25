@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/src/test/java/features/featureFiles/login.feature" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" project-jdk-name="10" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="libraryTable">
+    <library name="org.json-20130212">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES />
+    </library>
+    <library name="org.json-201302121">
+      <ANNOTATIONS>
+        <root url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" />
+      </ANNOTATIONS>
+      <CLASSES>
+        <root url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" />
+      </JAVADOC>
+      <NATIVE>
+        <root url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" />
+      </NATIVE>
+      <SOURCES>
+        <root url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" />
+      </SOURCES>
+      <jarDirectory url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" recursive="false" />
+      <jarDirectory url="jar://$USER_HOME$/Downloads/org.json-20130212.jar!/" recursive="false" type="SOURCES" />
+    </library>
+  </component>
+</project>

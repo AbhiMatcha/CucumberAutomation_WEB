@@ -1,0 +1,15 @@
+<suite name="AutomationScripts" parallel="tests" thread-count="1" >
+
+    <test name="Automation">
+
+        <parameter name="Sanity" value="Test one"/>
+
+        <classes>
+
+            <class name="features.TestRunner" />
+
+        </classes>
+
+    </test>
+
+</suite>
