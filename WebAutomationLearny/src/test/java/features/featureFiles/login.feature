@@ -73,6 +73,8 @@ Feature: LoginFeature
 
     Then User should login and can see profile
 
+    And user able to select profile
+
     Then  user should be able to logout
 
     Examples:

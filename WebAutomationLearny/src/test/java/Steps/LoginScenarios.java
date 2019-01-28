@@ -50,7 +50,6 @@ public class LoginScenarios
     {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(profile_button().isDisplayed(),true);
-        profile_button().click();
 
     }
 
@@ -134,5 +133,12 @@ public class LoginScenarios
         driver.manage().timeouts().implicitlyWait(3,TimeUnit.SECONDS);
         Assert.assertEquals(true, forgotPassword_Send().isDisplayed());
 
+    }
+
+    @And("^user able to select profile$")
+    public void userAbleToSelectProfile()
+    {
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        profile_button().click();
     }
 }

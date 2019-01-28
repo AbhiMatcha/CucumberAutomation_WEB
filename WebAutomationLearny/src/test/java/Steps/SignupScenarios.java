@@ -57,7 +57,7 @@ public class SignupScenarios {
         }
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(driver.findElement(By.id("userProfileDiv")).isDisplayed(), true);
-        driver.findElement(By.id("userProfileDiv")).click();
+//        driver.findElement(By.id("userProfileDiv")).click();
     }
 
     @Then("^user should see the message ([^\"]*) or skip the verification$")

@@ -1,21 +1,18 @@
-
 package Base;
-import Base.BaseUtil;
-import org.openqa.selenium.WebElement;
-import org.testng.ITestResult;
 
 import java.util.Random;
 
 public class utils extends BaseUtil
 {
     public static int actualPrice =1000;
+    public static int AddLongDelay=5000;
+    public static int AddShortDelay=3000;
     public static int GST_actualPrice =1000;
     public static int GST_Amount=(GST_actualPrice*18)/100;
     public static String userName="Abhishek";
     public static int MockTest_discountPrice =800;
     public static int TestSeries_discountPrice =100;
     public static String myCoupon=randomCoupon();
-    public static WebElement element = null;
     public static String scheduledTime="6th Apr, 2052";
     public static String Expired_Message="Expired";
     public static String evaluation_pending="Not evaluated";
