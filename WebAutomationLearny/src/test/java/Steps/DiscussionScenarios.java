@@ -30,7 +30,7 @@ public class DiscussionScenarios {
     }
 
     @Then("^user able to see the all fields of the redactor page$")
-    public void userAbleToSeeTheAllFieldsOfTheRedactorPage() {
+    public void userAbleToSeeTheAllFieldsOfTheRedactorPage() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, select_bold().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
@@ -53,6 +53,7 @@ public class DiscussionScenarios {
         Assert.assertEquals(true, cancelInput().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, enterInput().isDisplayed());
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to enter a question as input$")

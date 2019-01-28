@@ -157,10 +157,10 @@ public class courseDetailsScenarios {
     }
 
     @When("^user able to select create option in notes$")
-    public void userAbleToSelectCreateOptionInNotes()
-    {
+    public void userAbleToSelectCreateOptionInNotes() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         noteCreateTab().click();
+        Thread.sleep(AddLongDelay);
     }
 
     @Then("^user should be able to select the Certificate tab$")
