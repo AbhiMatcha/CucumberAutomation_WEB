@@ -92,8 +92,8 @@ public class CourseCertificate_repo extends BaseUtil {
         String option2 = "//*[@id='optionsTpl']/div/div/div/div/ul/li[2]/label/div[1]/label";
         String option3 = "//*[@id='optionsTpl']/div/div/div/div/ul/li[3]/label/div[1]/label";
         String option4 = "//*[@id='optionsTpl']/div/div/div/div/ul/li[4]/label/div[1]/label";
-//    	String selectAnswer[] = {option1,option2,option3,option4};
-        String selectAnswer[] = {option2};
+    	String selectAnswer[] = {option1,option2,option3,option4};
+//        String selectAnswer[] = {option2};
         Random generator = new Random();
         int randomIndex = generator.nextInt(selectAnswer.length);
         return selectAnswer[randomIndex];
@@ -104,8 +104,8 @@ public class CourseCertificate_repo extends BaseUtil {
         String option2 = "//*[@id='optionsTpl']/div/div/div/div/ul/li[2]/label/div[1]/label";
         String option3 = "//*[@id='optionsTpl']/div/div/div/div/ul/li[3]/label/div[1]/label";
         String option4 = "//*[@id='optionsTpl']/div/div/div/div/ul/li[4]/label/div[1]/label";
-//    	String selectAnswer[] = {option1,option2,option3,option4};
-        String selectAnswer[] = {option4};
+    	String selectAnswer[] = {option1,option2,option3,option4};
+//        String selectAnswer[] = {option4};
         Random generator = new Random();
         int randomIndex = generator.nextInt(selectAnswer.length);
         return selectAnswer[randomIndex];

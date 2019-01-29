@@ -75,7 +75,7 @@ Feature:  Discussion feature
 
     Given I navigated to signup page
 
-    And entered <signup_email_length> and <Signup_Password>
+    And entered email with length <signup_email_length> and <Signup_Password>
 
     And I tapped on signUp for free button
 

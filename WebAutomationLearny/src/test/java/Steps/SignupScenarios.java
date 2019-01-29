@@ -32,8 +32,8 @@ public class SignupScenarios {
         signup_password().sendKeys(password);
     }
 
-    @And("^entered ([^\"]*) and ([^\"]*)$")
-    public void userEnteredSignup_UsernameAndSignup_Password( int length, String password)
+    @And("^entered email with length ([^\"]*) and ([^\"]*)$")
+    public void userEnteredEmailWithLengthSignup_UsernameAndSignup_Password( int length, String password)
     {
         Assert.assertEquals(signup_mail().isDisplayed(), true);
         signup_mail().clear();
@@ -50,15 +50,15 @@ public class SignupScenarios {
     }
 
     @Then("^user should signup or skip the verification$")
-    public void userShouldSignupOrSkipTheVerification() {
+    public void userShouldSignupOrSkipTheVerification() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        if (SkipVerification().isDisplayed()) {
+        if (SkipVerification().isDisplayed())
+        {
             SkipVerification().click();
         }
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(driver.findElement(By.id("userProfileDiv")).isDisplayed(), true);
-//        driver.findElement(By.id("userProfileDiv")).click();
-    }
+     }
 
     @Then("^user should see the message ([^\"]*) or skip the verification$")
     public void userShouldSeeTheMessageErrorMessageOrSkipTheVerification(String errorMessage) throws InterruptedException {

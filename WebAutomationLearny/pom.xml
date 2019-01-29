@@ -358,6 +358,8 @@
                             <!--  Email subject -->
                             <subject>Test Automation Report</subject>
 
+                            <textMessage> Please download the file and fix if anything failed </textMessage>
+
                             <!-- Fail the build if the mail doesnt reach -->
                             <failonerror>true</failonerror>
 
@@ -378,6 +380,7 @@
                             <receivers>
                                 <!-- To Email address -->
                                 <receiver>abhishek.matcha@learnyst.com</receiver>
+                                <!--<receiver>shankar@learnyst.com</receiver>-->
 
                             </receivers>
 

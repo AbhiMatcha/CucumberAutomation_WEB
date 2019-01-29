@@ -22,10 +22,11 @@ import static Objects.student_repo.confirmAlert;
 
 public class courseDetailsScenarios {
     @Given("^user navigated to offered courses$")
-    public void userNavigatedToOfferedCourses() {
-
+    public void userNavigatedToOfferedCourses() throws InterruptedException
+    {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         offeredCourse().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to select the course$")
