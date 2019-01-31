@@ -16,7 +16,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
     And user should be able to select the CAT MockTest
 
-    And user able to see the enroll free course button
+    And user able to click enrol for free course button
 
     And user able to see take test button
 
@@ -38,7 +38,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | signup_email_length | Signup_Password |
 
-      | 7                   | abhi1234        |
+      | 9                   | abhi1234        |
 
   Scenario Outline: Validating LeaderBoard details
 
@@ -66,7 +66,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | signup_email_length | Signup_Password |
 
-      | 7                   | abhi1234        |
+      | 9                   | abhi1234        |
 
   Scenario Outline: Validating CAT Test by attempting the test
 
@@ -89,6 +89,8 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
     And user able to click take test button
 
     And user able to click start test button
+
+    And user able to cancel the restoring answer option if it displays
 
     And user able to answer the first question in section one of CAT test
 
@@ -144,29 +146,29 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | signup_email_length | Signup_Password |
 
-      | 7                   | abhi1234        |
+      | 9                   | abhi1234        |
 
-    Scenario Outline: Validating expired course
+  Scenario Outline: Validating expired course
 
-      Given I navigated to signup page
+    Given I navigated to signup page
 
-      And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with length <signup_email_length> and <Signup_Password>
 
-      And I tapped on signUp for free button
+    And I tapped on signUp for free button
 
-      Then user should signup or skip the verification
+    Then user should signup or skip the verification
 
-      Given user navigated to offered courses
+    Given user navigated to offered courses
 
-      And user should be able to select the expired mock test
+    And user should be able to select the expired mock test
 
-      And user able to see the expired message for particular mock test
+    And user able to see the expired message for particular mock test
 
-      Examples:
+    Examples:
 
-        | signup_email_length | Signup_Password |
+      | signup_email_length | Signup_Password |
 
-        | 7                   | abhi1234        |
+      | 9                   | abhi1234        |
 
 
   Scenario Outline: Validating scheduled course
@@ -189,4 +191,4 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | signup_email_length | Signup_Password |
 
-      | 7                   | abhi1234        |
+      | 9                   | abhi1234        |

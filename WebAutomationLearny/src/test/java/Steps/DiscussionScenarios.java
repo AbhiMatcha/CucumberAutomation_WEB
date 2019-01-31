@@ -85,6 +85,7 @@ public class DiscussionScenarios {
     @And("^user able to select course 'Fill in the blank' to verify discussion module$")
     public void userAbleToSelectCourseFillInTheBlankToVerifyDiscussionModule() throws InterruptedException
     {
+        Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, fillInTheBlank_Course().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

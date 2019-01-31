@@ -11,9 +11,9 @@ import java.util.concurrent.TimeUnit;
 import static Base.utils.*;
 import static Objects.homeScreen_repo.SkipVerification;
 import static Objects.login_repo.pop_up;
-import static Objects.signup_repo.signupForFree;
-import static Objects.signup_repo.signup_mail;
-import static Objects.signup_repo.signup_password;
+import static Objects.login_repo.signup_button;
+import static Objects.signup_repo.*;
+import static Objects.student_repo.confirmAlert;
 
 public class SignupScenarios {
     @Given("^I navigated to signup page$")
@@ -44,18 +44,21 @@ public class SignupScenarios {
     }
 
     @And("^I tapped on signUp for free button$")
-    public void iTappedOnSignUpForFreeButton() {
+    public void iTappedOnSignUpForFreeButton()
+    {
 
         signupForFree().click();
     }
 
     @Then("^user should signup or skip the verification$")
-    public void userShouldSignupOrSkipTheVerification() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        if (SkipVerification().isDisplayed())
+    public void userShouldSignupOrSkipTheVerification() throws InterruptedException
+    {
+        Thread.sleep(AddShortDelay);
+        if(SkipVerification().isDisplayed())
         {
             SkipVerification().click();
         }
+        Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(driver.findElement(By.id("userProfileDiv")).isDisplayed(), true);
      }

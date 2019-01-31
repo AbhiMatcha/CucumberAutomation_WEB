@@ -28,11 +28,17 @@ public class CertificateSceanrios
     @And("^user should be able to select the course to test certificate$")
     public void userShouldBeAbleToSelectTheCourseToTestCertificate() throws InterruptedException
     {
-        js.executeScript("window.scrollBy(285,700)", "");
-        Thread.sleep(AddShortDelay);
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        Assert.assertEquals(true,Course_verifyCertificate().isDisplayed());
-        Course_verifyCertificate().click();
+        if(Course_verifyCertificate().isDisplayed())
+        {
+            Course_verifyCertificate().click();
+        }
+        else
+        {
+            js.executeScript("window.scrollBy(285,700)", "");
+            Thread.sleep(AddShortDelay);
+            driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+            Course_verifyCertificate().click();
+        }
     }
 
     @And("^user able to see error message when he/she didnt taken the test$")
@@ -176,10 +182,10 @@ public class CertificateSceanrios
     }
 
     @And("^user able to solutions button after completing test$")
-    public void userAbleToSolutionsButtonAfterCompletingTest() 
-    {
+    public void userAbleToSolutionsButtonAfterCompletingTest() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true,solutions().isDisplayed());
+        Thread.sleep(AddShortDelay);
     }
 
     @Then("^user should navigate back to testplayer from result page$")
@@ -229,7 +235,7 @@ public class CertificateSceanrios
              * you are testing in local machine
              */
 
-//            driver.navigate().back();
+            driver.navigate().back();
         }
         else
         {

@@ -40,9 +40,17 @@ public class IITjeeMain_repo extends BaseUtil
         return element;
     }
 
+
     public static WebElement restoreAnswers(){
-        element = driver.findElement(By.className("btn-success"));
+        element = driver.findElement(By.id("restoreAns"));
         return element;
     }
+
+    public static WebElement CancelrestoreAnswers(){
+        element = driver.findElement(By.id("clearAnswers"));
+        return element;
+    }
+
+
 
 }

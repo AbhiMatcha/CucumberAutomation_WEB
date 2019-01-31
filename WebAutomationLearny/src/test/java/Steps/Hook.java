@@ -13,6 +13,8 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import static Base.utils.AddShortDelay;
+
 public class Hook extends BaseUtil
 {
     @Before
@@ -43,14 +45,15 @@ public class Hook extends BaseUtil
 
 
     @After
-    public void TearDownTest(Scenario scenario)
-    {
+    public void TearDownTest(Scenario scenario) throws InterruptedException {
         if(scenario.isFailed())
         {
             getscreenshot(scenario.getName());
             System.out.println(scenario.getName());
         }
+        driver.manage().deleteAllCookies();
         driver.quit();
+        Thread.sleep(AddShortDelay);
     }
 
     public void getscreenshot(String methodName)

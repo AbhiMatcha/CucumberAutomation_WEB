@@ -1,8 +1,10 @@
 package Steps;
 
 import Objects.resultPage_repo;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import gherkin.lexer.Th;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import java.util.LinkedList;
@@ -10,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 import static Base.utils.*;
 import static Objects.CATquiz_testDetails_LeaderBoard_repo.*;
 import static Objects.CourseOverview_repo.*;
+import static Objects.IITjeeMain_repo.CancelrestoreAnswers;
 import static Objects.MockTest_repo.*;
 import static Objects.homeScreen_repo.profile_button;
 import static Objects.quizRepo.*;
@@ -17,22 +20,22 @@ import static Objects.student_repo.*;
 
 public class LeaderBoardScenarios
 {
-    public static String userName;
-    public static JavascriptExecutor js = (JavascriptExecutor) driver;
+    private static String userName;
     private LinkedList<String> Course_LeaderBoardMarkList = new LinkedList<>();
     private LinkedList<String> Course_LeaderBoardList = new LinkedList<>();
     private LinkedList<String> ResultPage_LeaderBoardList = new LinkedList<>();
     private LinkedList<String> ResultPage_LeaderBoardMarkList = new LinkedList<>();
 
     @And("^user should be able to select the CAT MockTest$")
-    public void userShouldBeAbleToSelectTheCATMockTest() {
+    public void userShouldBeAbleToSelectTheCATMockTest() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, MockTest().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         MockTest().click();
+        Thread.sleep(AddShortDelay);
     }
 
-    @And("^user able to see the enroll free course button$")
+    @And("^c$")
     public void userAbleToSeeTheEnrollFreeCourseButton() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, enrollFreeCourse().isDisplayed());
@@ -90,25 +93,26 @@ public class LeaderBoardScenarios
     }
 
     @Then("^user should be able to select the Leader board tab$")
-    public void userShouldBeAbleToSelectTheLeaderBoardTab() {
+    public void userShouldBeAbleToSelectTheLeaderBoardTab() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         TestDetails_LeaderBoardTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see student name under leader board section$")
-    public void userAbleToSeeStudentNameUnderLeaderBoardSection() {
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertEquals(true, Rank_cloumn().isDisplayed());
-    }
-
-    @And("^user able to see Rank under leader board section$")
-    public void userAbleToSeeRankUnderLeaderBoardSection() {
+    public void userAbleToSeeStudentNameUnderLeaderBoardSection() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, Student_cloumn().isDisplayed());
     }
 
+    @And("^user able to see Rank under leader board section$")
+    public void userAbleToSeeRankUnderLeaderBoardSection() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertEquals(true, Rank_cloumn().isDisplayed());
+    }
+
     @And("^user able to see score under leader board section$")
-    public void userAbleToSeeScoreUnderLeaderBoardSection() {
+    public void userAbleToSeeScoreUnderLeaderBoardSection() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, Score_cloumn().isDisplayed());
 
@@ -129,7 +133,8 @@ public class LeaderBoardScenarios
     }
 
     @And("^user able to click start test button$")
-    public void userAbleToClickStartTestButton() throws InterruptedException {
+    public void userAbleToClickStartTestButton() throws InterruptedException
+    {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         startTest().click();
         Thread.sleep(AddShortDelay);
@@ -219,6 +224,7 @@ public class LeaderBoardScenarios
     {
         Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("scroll(1148,747);");
         Thread.sleep(AddShortDelay);
         for (int i = 1; i <= 10; i++) {
@@ -231,9 +237,7 @@ public class LeaderBoardScenarios
     public void userAbleToSeeHisHerNameInTheLeaderBoardSectionInResultPage() throws InterruptedException
     {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        System.out.println(UserName_leaderBoard().getText());
-        System.out.println(userName);
-        Assert.assertEquals(true, (UserName_leaderBoard().getText()).equals(userName));
+        Assert.assertEquals(true, (UserName_leaderBoard().getText()).equalsIgnoreCase(userName));
         Thread.sleep(AddShortDelay);
     }
 
@@ -300,4 +304,19 @@ public class LeaderBoardScenarios
         Thread.sleep(AddShortDelay);
         userName=profile_button().getText();
     }
+
+    @And("^user able to cancel the restoring answer option if it displays$")
+    public void userAbleToCancelTheRestoringAnswerOptionIfItDisplays()
+    {
+        try {
+            if (CancelrestoreAnswers().isDisplayed()) {
+                CancelrestoreAnswers().click();
+            }
+        }catch (Exception e)
+        {
+            System.out.println("");
+        }
+
+    }
+
 }

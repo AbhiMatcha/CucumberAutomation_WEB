@@ -81,11 +81,6 @@ public class student_repo extends BaseUtil
     /* ---------------------------------------------------------------------------------------------------------- */
     /* ################################## Answers for the tests #################################### */
 
-    public static WebElement fillInTheBlankAnswerInput(){
-        element = driver.findElement(By.id("answer"));
-        return element;
-    }
-
 
 
 

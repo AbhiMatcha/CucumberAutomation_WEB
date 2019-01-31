@@ -11,6 +11,7 @@ public class utils extends BaseUtil
     public static int GST_Amount=(GST_actualPrice*18)/100;
     public static String userName="Abhishek";
     public static int MockTest_discountPrice =800;
+    public static int defaultLength=7;
     public static int TestSeries_discountPrice =100;
     public static String myCoupon=randomCoupon();
     public static String scheduledTime="6th Apr, 2052";

@@ -16,9 +16,7 @@ Feature: Signup feature
 
       | signup_email_length | Signup_Password |
 
-      | 1                   | abhi1234        |
-
-      | 5                   | abhi1234        |
+      | 9                   | abhi1234        |
 
 
   Scenario Outline: validating signup with invalid details

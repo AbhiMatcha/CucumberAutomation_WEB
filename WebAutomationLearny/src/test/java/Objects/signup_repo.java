@@ -12,17 +12,11 @@ import static Objects.homeScreen_repo.*;
 
 public class signup_repo extends BaseUtil
 {
+    public static String errorMessage_signup ="email is already registered";
     public static String email ="abhishek.matcha@learnyst.com";
     public static String EmailExceedLength =randomEmail(38);
     public static String randomEmailInputs[] = {"<script>alert(document.cookie)</script>","<body onload=alert(‘something’)>;","<b onmouseover=alert(‘XSS testing!‘)></b>","ABHISHEK.MATCHA@LEARNYST.COM"," ","matcha.abhishek@learnyst.com",email,EmailExceedLength};
     public static String randomEmailpasswords[]={randomSpecialCharacter(),"  ","abhiq","ABHI1234"};
-    public static String Signup_errorMessage1 ="Please enter your email";
-    public static String Signup_errorMessage2="Please enter your password";
-    public static String Signup_errorMessage3 ="Wrong email and password combination";
-    public static String Signup_errorMessage4 ="email is already registered";
-    public static String Signup_errorMessage5 ="Validation failed: Name is too long (maximum is 35 characters)";
-    public static String Signup_errorMessage6 ="Please enter valid email";
-    public static String Signup_errorMessage7 ="Validation failed: Email Invalid Email, Name Special characters not allowed in name field";
     public static String enterYopmail=randomEmail(10);
 
     public static WebElement signup_mail(){

@@ -37,15 +37,13 @@ public class courseDetailsScenarios {
         Thread.sleep(AddLongDelay);
     }
 
-    @Then("^user should see the actual and discount price$")
-    public void userShouldSeeTheActualAndDiscountPrice() {
+    @Then("^user should see the actual and discount price for course$")
+    public void userShouldSeeTheActualAndDiscountPriceForCourse() {
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, (Integer.parseInt(courseDiscountPrice().getText())) == (MockTest_discountPrice));
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, (Integer.parseInt(courseActualPrice().getText())) == (actualPrice));
-
-
     }
 
     @And("^user able to see the school name at the footer$")
@@ -59,9 +57,10 @@ public class courseDetailsScenarios {
     }
 
     @Then("^user should be able to select the overview tab$")
-    public void userShouldBeAbleToSelectTheOverviewTab() {
+    public void userShouldBeAbleToSelectTheOverviewTab() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         overviewTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see description of the course$")
@@ -75,7 +74,7 @@ public class courseDetailsScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, courseExpiry().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertEquals(true, courseExpiry().getText() != null, "Course Details__test case 8: Expiry date is not displayed/null in the sales page");
+        Assert.assertEquals(true, courseExpiry().getText() != null);
 
     }
 

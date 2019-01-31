@@ -30,7 +30,7 @@ Feature: Download certificate by taking practise test & payment feature
 
       | signup_email_length | Signup_Password |
 
-      | 7                   | abhi1234        |
+      | 9                   | abhi1234        |
 
 
   Scenario Outline: Validating payment through certificate tab
@@ -71,7 +71,7 @@ Feature: Download certificate by taking practise test & payment feature
 
       | signup_email_length | Signup_Password |
 
-      | 7                   | abhi1234        |
+      | 9                   | abhi1234        |
 
 
   Scenario Outline: Validating download certificate functionality by taking test
