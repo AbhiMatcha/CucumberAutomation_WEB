@@ -13,7 +13,7 @@ import static Objects.student_repo.confirmAlert;
 
 public class homeScreen_repo extends BaseUtil
 {
-    public static String verifyCertificateName="Verify-certificate";
+    public static String searchCourse ="Verify-certificate";
     public static String name ="testing";
     public static String place ="Learnyst";
     public static String country ="India";
@@ -36,6 +36,12 @@ public class homeScreen_repo extends BaseUtil
         element = driver.findElement(By.id("nav-newsfeed"));
         return element;
     }
+
+    public static WebElement help_button(){
+        element = driver.findElement(By.linkText("Help"));
+        return element;
+    }
+
     public static WebElement search_course(){
         element = driver.findElement(By.xpath("//*[@id='search-input']"));
         return element;
@@ -67,6 +73,11 @@ public class homeScreen_repo extends BaseUtil
 
     public static WebElement offeredCourse(){
         element = driver.findElement(By.xpath("//*[@id='dashTabs']/li[2]/a"));
+        return element;
+    }
+
+    public static WebElement offeredCourse_trailUser(){
+        element = driver.findElement(By.xpath("//*[@id='dashTabs']/li/a"));
         return element;
     }
 

@@ -5,6 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
@@ -47,11 +48,11 @@ public class courseDetailsScenarios
     }
 
     @And("^user able to see the school name at the footer$")
-    public void userAbleToSeeTheSchoolNameAtTheFooter() {
-
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    public void userAbleToSeeTheSchoolNameAtTheFooter() throws InterruptedException {
+        Thread.sleep(AddShortDelay);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", Footer());
         Assert.assertEquals(true, Footer().isDisplayed());
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, Footer().getText().equals(schoolName));
 
     }
@@ -79,10 +80,10 @@ public class courseDetailsScenarios
     }
 
     @Then("^user should be able to select the syllabus tab$")
-    public void userShouldBeAbleToSelectTheSyllabusTab()
-    {
+    public void userShouldBeAbleToSelectTheSyllabusTab() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         syllabusTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see course title in syllabus section$")

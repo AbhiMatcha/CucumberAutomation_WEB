@@ -1,10 +1,7 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import gherkin.lexer.Th;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
@@ -126,10 +123,12 @@ public class CertificateSceanrios
     public void userAbleToSearchForCourse() throws InterruptedException
     {
         Thread.sleep(AddShortDelay);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", search_course());
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true, search_course().isDisplayed());
         search_course().click();
-        search_course().sendKeys(verifyCertificateName);
+        search_course().sendKeys(searchCourse);
     }
 
     @Then("^user able to see the start course option after completing payment$")

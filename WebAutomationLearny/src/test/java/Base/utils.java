@@ -26,6 +26,7 @@ public class utils extends BaseUtil
     public static String google_email="testAppLearnyst@gmail.com";
     public static String google_password="learnyst***";
     public static String Fb_Password= "karaokegarage";
+    public static String homepage_URL="https://learnnew.learnyst.com/learn";
     public static String login_URL="https://learnnew.learnyst.com/learn/login";
     public static String GST_login_URL="https://learnnew1.learnyst.com/learn/login";
     public static String signup_URL="https://learnnew.learnyst.com/learn/login?path=learn&state=12";

@@ -1,14 +1,10 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import gherkin.lexer.Th;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
-
 import java.util.concurrent.TimeUnit;
-
 import static Base.utils.*;
 import static Objects.CourseOverview_repo.*;
 import static Objects.CourseSyllabus_repo.*;
@@ -16,9 +12,11 @@ import static Objects.MockTest_repo.*;
 import static Objects.TestSeries_repo.*;
 import static Objects.resultPage_repo.*;
 
-public class TestSeriesScenarios {
+public class TestSeriesScenarios
+{
     @And("^user able to select test series$")
-    public void userAbleToSelectTestSeries() {
+    public void userAbleToSelectTestSeries()
+    {
         TestSeries_test().click();
     }
 
@@ -80,14 +78,17 @@ public class TestSeriesScenarios {
     }
 
     @And("^user should navigate back to sales page from payment page and select syllabus tab$")
-    public void userShouldNavigateBackToSalesPageFromPaymentPageAndSelectSyllabusTab() {
+    public void userShouldNavigateBackToSalesPageFromPaymentPageAndSelectSyllabusTab() throws InterruptedException {
         driver.navigate().back();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         syllabusTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to select Math test under syllabus$")
-    public void userAbleToSelectMathTestUnderSyllabus() throws InterruptedException {
+    public void userAbleToSelectMathTestUnderSyllabus() throws InterruptedException
+    {
+        Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         TestSeries_Mathstest().click();
         Thread.sleep(AddShortDelay);
