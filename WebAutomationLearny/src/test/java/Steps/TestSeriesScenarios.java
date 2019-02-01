@@ -73,9 +73,10 @@ public class TestSeriesScenarios {
     }
 
     @And("^user able to click buy button in sales page$")
-    public void userAbleToClickBuyButtonInSalesPage() {
+    public void userAbleToClickBuyButtonInSalesPage() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         buynowButton().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user should navigate back to sales page from payment page and select syllabus tab$")

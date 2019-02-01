@@ -6,6 +6,8 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.testng.Assert;
 
+import java.util.concurrent.TimeUnit;
+
 import static Base.utils.*;
 import static Objects.CourseOverview_repo.Coupon_error;
 import static Objects.CourseSyllabus_repo.*;
@@ -40,6 +42,7 @@ public class CheckoutPageSceanrios
     @Then("^user able to select country in address form$")
     public void userAbleToSelectCountryInAddressForm()
     {
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         selectCountry();
     }
 
