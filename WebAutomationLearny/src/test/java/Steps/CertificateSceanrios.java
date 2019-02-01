@@ -198,10 +198,10 @@ public class CertificateSceanrios
     }
 
     @And("^user able to view result$")
-    public void userAbleToViewResult()
-    {
+    public void userAbleToViewResult() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true,Course_viewResult().isDisplayed());
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see retake count$")

@@ -148,8 +148,9 @@ public class LeaderBoardScenarios
     }
 
     @And("^user should be able to save the answered question$")
-    public void userShouldBeAbleToSaveTheAnsweredQuestion() {
+    public void userShouldBeAbleToSaveTheAnsweredQuestion() throws InterruptedException {
         saveButton().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to answer the second question in section one of CAT test$")
