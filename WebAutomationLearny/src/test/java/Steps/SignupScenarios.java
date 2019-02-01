@@ -11,13 +11,12 @@ import java.util.concurrent.TimeUnit;
 import static Base.utils.*;
 import static Objects.homeScreen_repo.SkipVerification;
 import static Objects.login_repo.pop_up;
-import static Objects.login_repo.signup_button;
 import static Objects.signup_repo.*;
-import static Objects.student_repo.confirmAlert;
 
 public class SignupScenarios {
     @Given("^I navigated to signup page$")
-    public void iNavigatedToSignupPage() {
+    public void iNavigatedToSignupPage()
+    {
         driver.get(signup_URL);
     }
 

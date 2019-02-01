@@ -5,7 +5,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gherkin.lexer.Th;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
@@ -20,7 +19,8 @@ import static Objects.homeScreen_repo.*;
 import static Objects.payment_repo.paySecurely;
 import static Objects.student_repo.confirmAlert;
 
-public class courseDetailsScenarios {
+public class courseDetailsScenarios
+{
     @Given("^user navigated to offered courses$")
     public void userNavigatedToOfferedCourses() throws InterruptedException
     {
