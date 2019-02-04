@@ -5,7 +5,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import gherkin.lexer.Th;
+import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
@@ -20,7 +20,8 @@ import static Objects.homeScreen_repo.*;
 import static Objects.payment_repo.paySecurely;
 import static Objects.student_repo.confirmAlert;
 
-public class courseDetailsScenarios {
+public class courseDetailsScenarios
+{
     @Given("^user navigated to offered courses$")
     public void userNavigatedToOfferedCourses() throws InterruptedException
     {
@@ -37,31 +38,30 @@ public class courseDetailsScenarios {
         Thread.sleep(AddLongDelay);
     }
 
-    @Then("^user should see the actual and discount price$")
-    public void userShouldSeeTheActualAndDiscountPrice() {
+    @Then("^user should see the actual and discount price for course$")
+    public void userShouldSeeTheActualAndDiscountPriceForCourse() {
 
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, (Integer.parseInt(courseDiscountPrice().getText())) == (MockTest_discountPrice));
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, (Integer.parseInt(courseActualPrice().getText())) == (actualPrice));
-
-
     }
 
     @And("^user able to see the school name at the footer$")
-    public void userAbleToSeeTheSchoolNameAtTheFooter() {
-
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    public void userAbleToSeeTheSchoolNameAtTheFooter() throws InterruptedException {
+        Thread.sleep(AddShortDelay);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", Footer());
         Assert.assertEquals(true, Footer().isDisplayed());
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, Footer().getText().equals(schoolName));
 
     }
 
     @Then("^user should be able to select the overview tab$")
-    public void userShouldBeAbleToSelectTheOverviewTab() {
+    public void userShouldBeAbleToSelectTheOverviewTab() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         overviewTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see description of the course$")
@@ -75,15 +75,15 @@ public class courseDetailsScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, courseExpiry().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertEquals(true, courseExpiry().getText() != null, "Course Details__test case 8: Expiry date is not displayed/null in the sales page");
+        Assert.assertEquals(true, courseExpiry().getText() != null);
 
     }
 
     @Then("^user should be able to select the syllabus tab$")
-    public void userShouldBeAbleToSelectTheSyllabusTab()
-    {
+    public void userShouldBeAbleToSelectTheSyllabusTab() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         syllabusTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see course title in syllabus section$")

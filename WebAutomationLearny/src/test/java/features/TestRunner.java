@@ -9,7 +9,8 @@ import org.junit.runner.RunWith;
         features = {"src/test/java/features/featureFiles/"},
         glue = "Steps",
         format = {"pretty", "json:target/cucumber.json"},
-        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/site/cucumber-reports/report.html"}
+        plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/site/cucumber-reports/report.html"},
+        monochrome = true
 )
 public class TestRunner {
 

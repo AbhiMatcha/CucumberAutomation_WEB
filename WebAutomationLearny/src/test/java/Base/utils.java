@@ -11,6 +11,7 @@ public class utils extends BaseUtil
     public static int GST_Amount=(GST_actualPrice*18)/100;
     public static String userName="Abhishek";
     public static int MockTest_discountPrice =800;
+    public static int defaultLength=7;
     public static int TestSeries_discountPrice =100;
     public static String myCoupon=randomCoupon();
     public static String scheduledTime="6th Apr, 2052";
@@ -25,6 +26,7 @@ public class utils extends BaseUtil
     public static String google_email="testAppLearnyst@gmail.com";
     public static String google_password="learnyst***";
     public static String Fb_Password= "karaokegarage";
+    public static String homepage_URL="https://learnnew.learnyst.com/learn";
     public static String login_URL="https://learnnew.learnyst.com/learn/login";
     public static String GST_login_URL="https://learnnew1.learnyst.com/learn/login";
     public static String signup_URL="https://learnnew.learnyst.com/learn/login?path=learn&state=12";
@@ -144,7 +146,7 @@ public class utils extends BaseUtil
         int randomIndex = generator.nextInt(selectAnswer.length);
         return selectAnswer[randomIndex];
     }
-    protected static String randomMobile()
+    public static String randomMobile()
     {
         String selectAnswer[] = { "+919494900017","9494900017"};
         Random generator = new Random();

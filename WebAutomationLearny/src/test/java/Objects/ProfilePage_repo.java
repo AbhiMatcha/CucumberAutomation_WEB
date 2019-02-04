@@ -16,11 +16,8 @@ public class ProfilePage_repo  extends BaseUtil
     public static String filedEmpty_Message="None of the fields shall be empty";
     public static String errorMessage="×\n" +
             "Provide valid mobile number with country code (Example '+91' for India)";
-    public static String passwordChanged_Message="×\n" +
-            "Your password has changed";
-    public static String oldPasswordIncorrect_Message="Old password is incorrect.";
-    public static String chooseNewPassword_Message="Please choose new password";
-    public static String passwordsNotMatching_Message="New passwords are not matching";
+    public static String passwordChanged_Message="\n" +
+            "  Your password has changed";
 
     public static WebElement profile_closeAlert(){
         element = driver.findElement(By.id("//*[@id='learnyAlerts']/div/a"));
@@ -67,7 +64,7 @@ public class ProfilePage_repo  extends BaseUtil
     }
 
 
-    public static WebElement profile_chanePassword_save(){
+    public static WebElement profile_changePassword_save(){
         element = driver.findElement(By.id("changePassSubmit"));
         return element;
     }
@@ -123,8 +120,9 @@ public class ProfilePage_repo  extends BaseUtil
         return element;
     }
 
-    public static WebElement profile_alertMessage(){
-        element = driver.findElement(By.className("alert-dismissable"));
+    public static WebElement profile_alertMessage()
+    {
+        element = driver.findElement(By.xpath("//*[@id='learnyAlerts']/div"));
         return element;
     }
 

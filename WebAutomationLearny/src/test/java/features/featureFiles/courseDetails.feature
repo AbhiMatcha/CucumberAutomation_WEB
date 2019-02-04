@@ -16,7 +16,7 @@ Feature: Course details feature
 
     And user able to select the course
 
-    Then user should see the actual and discount price
+    Then user should see the actual and discount price for course
 
     And user able to see the school name at the footer
 

@@ -14,7 +14,7 @@ public class support_repo extends BaseUtil
     }
 
     public static WebElement supportTicket_description() {
-        element = driver.findElement(By.id("long_description"));
+        element = driver.findElement(By.id("description"));
         return element;
     }
 

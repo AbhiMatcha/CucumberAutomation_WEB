@@ -1,10 +1,7 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import gherkin.lexer.Th;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 
@@ -28,11 +25,17 @@ public class CertificateSceanrios
     @And("^user should be able to select the course to test certificate$")
     public void userShouldBeAbleToSelectTheCourseToTestCertificate() throws InterruptedException
     {
-        js.executeScript("window.scrollBy(285,700)", "");
-        Thread.sleep(AddShortDelay);
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        Assert.assertEquals(true,Course_verifyCertificate().isDisplayed());
-        Course_verifyCertificate().click();
+        if(Course_verifyCertificate().isDisplayed())
+        {
+            Course_verifyCertificate().click();
+        }
+        else
+        {
+            js.executeScript("window.scrollBy(285,700)", "");
+            Thread.sleep(AddShortDelay);
+            driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+            Course_verifyCertificate().click();
+        }
     }
 
     @And("^user able to see error message when he/she didnt taken the test$")
@@ -120,10 +123,12 @@ public class CertificateSceanrios
     public void userAbleToSearchForCourse() throws InterruptedException
     {
         Thread.sleep(AddShortDelay);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", search_course());
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true, search_course().isDisplayed());
         search_course().click();
-        search_course().sendKeys(verifyCertificateName);
+        search_course().sendKeys(searchCourse);
     }
 
     @Then("^user able to see the start course option after completing payment$")
@@ -176,10 +181,10 @@ public class CertificateSceanrios
     }
 
     @And("^user able to solutions button after completing test$")
-    public void userAbleToSolutionsButtonAfterCompletingTest() 
-    {
+    public void userAbleToSolutionsButtonAfterCompletingTest() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true,solutions().isDisplayed());
+        Thread.sleep(AddShortDelay);
     }
 
     @Then("^user should navigate back to testplayer from result page$")
@@ -192,10 +197,10 @@ public class CertificateSceanrios
     }
 
     @And("^user able to view result$")
-    public void userAbleToViewResult()
-    {
+    public void userAbleToViewResult() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true,Course_viewResult().isDisplayed());
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see retake count$")
