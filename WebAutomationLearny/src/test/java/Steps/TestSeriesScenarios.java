@@ -15,9 +15,9 @@ import static Objects.resultPage_repo.*;
 public class TestSeriesScenarios
 {
     @And("^user able to select test series$")
-    public void userAbleToSelectTestSeries()
-    {
+    public void userAbleToSelectTestSeries() throws InterruptedException {
         TestSeries_test().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see the course description of test series$")

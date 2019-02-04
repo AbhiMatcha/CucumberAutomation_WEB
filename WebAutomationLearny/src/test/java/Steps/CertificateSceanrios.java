@@ -234,7 +234,7 @@ public class CertificateSceanrios
              * you are testing in local machine
              */
 
-            driver.navigate().back();
+//            driver.navigate().back();
         }
         else
         {

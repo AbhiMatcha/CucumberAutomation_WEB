@@ -4,8 +4,6 @@ Feature: profile feature
 
   Scenario Outline: Validating error messages in profile page while changing the password
 
-#    When get the email when user signup's in the application
-
     Given I navigated to signup page
 
     And entered email with length <signup_email_length> and <Signup_Password>
