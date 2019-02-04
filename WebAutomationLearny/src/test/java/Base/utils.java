@@ -146,7 +146,7 @@ public class utils extends BaseUtil
         int randomIndex = generator.nextInt(selectAnswer.length);
         return selectAnswer[randomIndex];
     }
-    protected static String randomMobile()
+    public static String randomMobile()
     {
         String selectAnswer[] = { "+919494900017","9494900017"};
         Random generator = new Random();

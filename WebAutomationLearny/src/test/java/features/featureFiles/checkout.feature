@@ -46,9 +46,6 @@ Feature: checkout feature
 
     And user able to see the refund policy
 
-
-
-
     Examples:
 
       | signup_email_length | Signup_Password |

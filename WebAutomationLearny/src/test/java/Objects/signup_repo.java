@@ -60,7 +60,6 @@ public class signup_repo extends BaseUtil
         signup_mail().sendKeys(name);
         signup_password().sendKeys(password);
         signupForFree().click();
-        Thread.sleep(4000);
         if(SkipVerification().isDisplayed())
         {
             SkipVerification().click();

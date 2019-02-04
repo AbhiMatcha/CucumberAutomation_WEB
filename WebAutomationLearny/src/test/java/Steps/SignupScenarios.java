@@ -15,9 +15,9 @@ import static Objects.signup_repo.*;
 
 public class SignupScenarios {
     @Given("^I navigated to signup page$")
-    public void iNavigatedToSignupPage()
-    {
+    public void iNavigatedToSignupPage() throws InterruptedException {
         driver.get(signup_URL);
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user entered ([^\"]*) and ([^\"]*)$")
@@ -45,7 +45,6 @@ public class SignupScenarios {
     @And("^I tapped on signUp for free button$")
     public void iTappedOnSignUpForFreeButton()
     {
-
         signupForFree().click();
     }
 
