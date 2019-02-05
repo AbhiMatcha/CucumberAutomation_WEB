@@ -220,8 +220,8 @@ public class CertificateSceanrios
     }
 
     @Then("^user able to download the certificate if he is eligible$")
-    public void userAbleToDownloadTheCertificateIfHeIsEligible() throws InterruptedException {
-
+    public void userAbleToDownloadTheCertificateIfHeIsEligible() throws InterruptedException
+    {
         if(CertificateTestStatus().getText().equals(statusAfterPassingTest))
         {
             Assert.assertEquals(true,TestMessage_forDownload().getText().equals(SucessMessageTodownloadCert));

@@ -2,7 +2,7 @@ Feature: checkout feature
 
   This feature deals with the checkout page functionality of the application
 
-  Scenario Outline: Verify checkout page
+  Scenario Outline: user able to access checkout page after signing up
 
     Given I navigated to signup page for GST enable school
 

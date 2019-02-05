@@ -2,7 +2,7 @@ Feature: Test series feature
 
   This feature deals with validating Test series functionality in the application
 
-  Scenario Outline: Validating Test series details in sales page
+  Scenario Outline: user able to see the Test series details in sales page
 
     Given I navigated to signup page
 
@@ -54,7 +54,7 @@ Feature: Test series feature
 
       | 9                   | abhi1234        |
 
-  Scenario Outline: Validating payment for Test series
+  Scenario Outline: user able to do payment for Test series
 
     Given I navigated to signup page
 
@@ -93,7 +93,7 @@ Feature: Test series feature
       | 9                   | abhi1234        |
 
 
-    Scenario Outline: Validating by taking test through syllabus for Test series
+    Scenario Outline: user able to take test through syllabus for Test series
 
       Given I navigated to signup page
 

@@ -2,7 +2,7 @@ Feature: LoginFeature
 
   This feature deals with the login functionality of the application
 
-  Scenario: Validating Facebook login
+  Scenario: user able to do Facebook login
 
     Given I navigate to login page
 
@@ -10,7 +10,7 @@ Feature: LoginFeature
 
     Then navigated to homepage after login
 
-  Scenario: Validating forgot password in login page
+  Scenario: user able to use forgot password option in login page
 
     Given I navigate to login page
 
@@ -22,7 +22,7 @@ Feature: LoginFeature
 
     Then click on send button and verify message displayed
 
-  Scenario Outline: Login with valid details
+  Scenario Outline: user able to Login with valid details
 
     Given I navigate to login page
 
@@ -39,7 +39,7 @@ Feature: LoginFeature
       | abhishek.matcha@learnyst.com | abhi1234 |
 
 
-  Scenario Outline: Validating error messages in login page
+  Scenario Outline: user able to see error messages in login page on entering invalid inputs
 
     Given I navigate to login page
 
@@ -63,7 +63,7 @@ Feature: LoginFeature
 
       | 23344555                     | abh345    | Please enter valid email             |
 
-  Scenario Outline: Validating logout functionality
+  Scenario Outline: user able to logout
 
     Given I navigate to login page
 
