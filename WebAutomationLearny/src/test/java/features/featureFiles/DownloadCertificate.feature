@@ -2,7 +2,7 @@ Feature: Download certificate by taking practise test & payment feature
 
   This feature deals with validating the details under certificate tab, payment, Download certificate functionality when user is eligible
 
-  Scenario Outline: Validating details under cerificate tab
+  Scenario Outline: user able to see the details under cerificate tab
 
     Given I navigated to signup page
 
@@ -33,7 +33,7 @@ Feature: Download certificate by taking practise test & payment feature
       | 9                   | abhi1234        |
 
 
-  Scenario Outline: Validating payment through certificate tab
+  Scenario Outline: user able to do payment through certificate tab
 
     Given I navigated to signup page
 
@@ -74,7 +74,7 @@ Feature: Download certificate by taking practise test & payment feature
       | 9                   | abhi1234        |
 
 
-  Scenario Outline: Validating download certificate functionality by taking test
+  Scenario Outline: user able to download certificate by taking test
 
     Given I navigate to login page
 

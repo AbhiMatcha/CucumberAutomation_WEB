@@ -2,7 +2,7 @@ Feature: Support feature
 
   This feature deals with the support functionality of the application
 
-  Scenario Outline: Raise a support ticket
+  Scenario Outline: User able to raise a support ticket
 
     Given I navigate to login page
 

@@ -2,7 +2,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
   This feature deals with validating the test details, Scheduled test, Expired test & LeaderBoard functionality once user complete CAT test in the application
 
-  Scenario Outline: Validating test details
+  Scenario Outline: user able to see the test details
 
     Given I navigated to signup page
 
@@ -40,7 +40,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | 9                   | abhi1234        |
 
-  Scenario Outline: Validating LeaderBoard details
+  Scenario Outline: user able to see the LeaderBoard details
 
     Given I navigated to signup page
 
@@ -68,7 +68,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | 9                   | abhi1234        |
 
-  Scenario Outline: Validating CAT Test by attempting the test
+  Scenario Outline: user able to take the CAT Test
 
     Given I navigated to signup page
 
@@ -148,7 +148,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
       | 9                   | abhi1234        |
 
-  Scenario Outline: Validating expired course
+  Scenario Outline: user able to see the details of expired course
 
     Given I navigated to signup page
 
@@ -171,7 +171,7 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
       | 9                   | abhi1234        |
 
 
-  Scenario Outline: Validating scheduled course
+  Scenario Outline: user able to see the details scheduled course
 
     Given I navigated to signup page
 

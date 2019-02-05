@@ -2,7 +2,7 @@ Feature: profile feature
 
   This feature deals with the profile page functionality in the application
 
-  Scenario Outline: Validating error messages in profile page while changing the password
+  Scenario Outline: user able to see the error messages in profile page while changing the password by giving invalid inputs
 
     Given I navigated to signup page
 
@@ -47,7 +47,7 @@ Feature: profile feature
       | 9                   | abhi1234        | abhi12345    | abhi1234      | abhi12345        | New passwords are not matching |
 
 
-  Scenario Outline: Validating profile page
+  Scenario Outline: user able to edit and save the chagnes in profile page
 
     When get the email when user signup's in the application
 

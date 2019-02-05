@@ -2,7 +2,7 @@ Feature: Gmat Test feature
 
   This feature deals with validating Gmat test functionality in the application
 
-  Scenario Outline: Validating Gmat test by taking test
+  Scenario Outline: user able to take Gmat test
 
     Given I navigated to signup page
 

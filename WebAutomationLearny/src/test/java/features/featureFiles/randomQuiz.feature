@@ -2,7 +2,7 @@ Feature: Random quiz feature
 
   This feature deals with the random quiz functionality in the application
 
-  Scenario Outline: Verify Random quiz
+  Scenario Outline: user able to take the Random quiz and questions should not get repeat in same order while retaking the test
 
     Given I navigated to signup page
 

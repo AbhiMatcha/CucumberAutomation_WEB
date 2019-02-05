@@ -2,7 +2,7 @@ Feature: Notes feature
 
   This feature deals with the notes page functionality of the application
 
-  Scenario Outline: Verifying the functionality of Notes feature
+  Scenario Outline: user should be create the notes using all options in redactor
 
     Given I navigate to login page
 

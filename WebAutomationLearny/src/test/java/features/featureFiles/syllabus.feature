@@ -2,7 +2,7 @@ Feature: Syllabus feature
 
   This feature deals with the syllabus functionality of the application
 
-  Scenario Outline: Verify syllabus tab in course details
+  Scenario Outline: user able to access syllabus tab in course details
 
     Given I navigate to login page
 

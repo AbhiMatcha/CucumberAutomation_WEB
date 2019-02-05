@@ -2,7 +2,7 @@ Feature: Course details feature
 
   This feature deals with the sales page functionality of the application
 
-  Scenario Outline: Verify overview tab in course details
+  Scenario Outline: user able to access overview tab in course details
 
     Given I navigated to signup page
 
@@ -32,7 +32,7 @@ Feature: Course details feature
 
       | 7                   | abhi1234        |
 
-  Scenario Outline: Verify syllabus tab in course details
+  Scenario Outline: user able to access syllabus tab in course details
 
     Given I navigated to signup page
 
@@ -64,7 +64,7 @@ Feature: Course details feature
 
       | 7                   | abhi1234        |
 
-  Scenario Outline: Verify discussion tab in course details
+  Scenario Outline: user able to access discussion tab in course details
 
     Given I navigated to signup page
 
@@ -95,7 +95,7 @@ Feature: Course details feature
 
       | 7                   | abhi1234        |
 
-  Scenario Outline: Verify Notes tab in course details
+  Scenario Outline: user able to access Notes tab in course details
 
     Given I navigated to signup page
 
@@ -127,7 +127,7 @@ Feature: Course details feature
       | 7                   | abhi1234        |
 
 
-  Scenario Outline: Verify Certificate tab in course details
+  Scenario Outline: user able to access certificate tab in course details
 
     Given I navigated to signup page
 
@@ -159,7 +159,7 @@ Feature: Course details feature
       | 7                   | abhi1234        |
 
 
-  Scenario Outline: Verify details of the course in course details
+  Scenario Outline: user able to see course details
 
     Given I navigated to signup page
 

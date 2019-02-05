@@ -2,7 +2,7 @@ Feature: Signup feature
 
   This feature deals with the Signup functionality of the application
 
-  Scenario Outline: validating signup with valid details
+  Scenario Outline: user able to signup with valid details
 
     Given I navigated to signup page
 
@@ -19,7 +19,7 @@ Feature: Signup feature
       | 9                   | abhi1234        |
 
 
-  Scenario Outline: validating signup with invalid details
+  Scenario Outline: user able to signup with invalid details
 
     Given I navigated to signup page
 

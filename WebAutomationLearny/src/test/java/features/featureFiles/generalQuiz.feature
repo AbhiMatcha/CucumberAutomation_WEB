@@ -2,7 +2,7 @@ Feature: general quiz feature
 
   This feature deals with the general quiz functionality of the application
 
-  Scenario Outline: Verifying general quiz
+  Scenario Outline: user able to take general quiz
 
     Given I navigated to signup page
 

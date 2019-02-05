@@ -2,7 +2,7 @@ Feature:  Discussion feature
 
   This feature deals with the discussion page functionality of the application
 
-  Scenario Outline: Verifying the functionality of disucssion feature
+  Scenario Outline: user should be post the question using all options in redactor
 
     Given I navigate to login page
 
@@ -71,7 +71,7 @@ Feature:  Discussion feature
       | abhishek.matcha@learnyst.com | abhi1234 |
 
 
-  Scenario Outline: Verifying the posted question can be viewd by another user
+  Scenario Outline: user able to view the posted question by another user
 
     Given I navigated to signup page
 
@@ -100,7 +100,7 @@ Feature:  Discussion feature
       | 7                   | abhi1234        |
 
 
-  Scenario Outline: Verifying the user able to delete the posted question in disucssion
+  Scenario Outline: user able to delete the posted question in disucssion
 
     Given I navigate to login page
 

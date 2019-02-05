@@ -2,7 +2,7 @@ Feature: Result page, IITjee Test, mark for review and section navigation featur
 
   This feature deals with the all options while taking the IITjee test and result page functionality of the application
 
-  Scenario Outline: Verify all options(section naviagation, mark for review, Read instructions) while taking IITjee test
+  Scenario Outline: user able to use all options(section naviagation, mark for review, Read instructions) while taking IITjee test
 
     Given I navigated to signup page
 
@@ -103,7 +103,7 @@ Feature: Result page, IITjee Test, mark for review and section navigation featur
       | 9                   | abhi1234        |
 
 
-  Scenario Outline: Verify all options in result page
+  Scenario Outline: user able to see all the options in result page
 
     Given I navigate to login page
 

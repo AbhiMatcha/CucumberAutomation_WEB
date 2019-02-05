@@ -2,7 +2,7 @@ Feature: practise quiz feature
 
   This feature deals with the practise quiz functionality of the application
 
-  Scenario Outline: Verifying practise quiz
+  Scenario Outline: user able to take the practise quiz
 
     Given I navigated to signup page
 
