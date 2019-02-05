@@ -24,11 +24,11 @@ public class Hook extends BaseUtil
         /**
          *  For chrome browser run
          */
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("-start-fullscreen");
-        driver = new ChromeDriver(chromeOptions);
-        driver.manage().deleteAllCookies();
-        stepInfo="Scenario Start";
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("-start-fullscreen");
+//        driver = new ChromeDriver(chromeOptions);
+//        driver.manage().deleteAllCookies();
+//        stepInfo="Scenario Start";
 
         /**
          *  For headless chrome
