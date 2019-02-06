@@ -16,7 +16,7 @@ Feature: Syllabus feature
 
     And user able to select the courses tab
 
-    And user able to select course 'Fill in the blank' to verify discussion module
+    And user able to select course 'Fill in the blank'
 
     And user able to see the purchased message in course details
 

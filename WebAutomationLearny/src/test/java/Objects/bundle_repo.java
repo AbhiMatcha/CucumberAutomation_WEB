@@ -22,7 +22,44 @@ public class bundle_repo extends BaseUtil
         return element;
     }
 
+    public static WebElement Select_first_lesson()
+    {
+        element=driver.findElement(By.xpath("//*[@id='39801']/h3"));
+        return  element;
+    }
 
+    public static WebElement Select_second_lesson()
+    {
+        element=driver.findElement(By.xpath("//*[@id='39802']/h3"));
+        return  element;
+    }
+
+    public static WebElement video_Lesson(){
+        element = driver.findElement(By.xpath("//*[contains(text(),'Video lesson 4')]"));
+        return element;
+    }
+
+    public static WebElement Bundle_cat_test_Lesson(){
+        element = driver.findElement(By.xpath("//*[contains(text(),'Mock CAT Paper 1')]"));
+        return element;
+    }
+
+    public static WebElement slide_Lesson(){
+        element = driver.findElement(By.xpath("//*[contains(text(),'Slides lesson 3')]"));
+        return element;
+    }
+
+    public static WebElement pdf_Lesson(){
+        element = driver.findElement(By.xpath("//*[contains(text(),'PDF lesson 2')]"));
+        return element;
+    }
+
+
+
+    public static WebElement playVidoeButton(){
+        element = driver.findElement(By.className("vjs-big-play-button"));
+        return element;
+    }
 
     public static WebElement Verify_videoPDFslides_lesson(){
         element = driver.findElement(By.xpath("//*[@id='39801']"));
@@ -35,20 +72,6 @@ public class bundle_repo extends BaseUtil
     }
 
 
-    public static WebElement video_lesson(){
-        element = driver.findElement(By.xpath("//*[contains(text(),'When to start taking Mock CATs?')]"));
-        return element;
-    }
-
-    public static WebElement Pdf_lesson(){
-        element = driver.findElement(By.xpath("//*[contains(text(),'PDF lesson 2')]"));
-        return element;
-    }
-
-    public static WebElement slides_lesson(){
-        element = driver.findElement(By.xpath("//*[contains(text(),'Slides lesson 3')]"));
-        return element;
-    }
 
     public static WebElement test_lesson(){
         element = driver.findElement(By.xpath("//h4[contains(text(),'Mock CAT Paper 1')]"));
@@ -106,12 +129,12 @@ public class bundle_repo extends BaseUtil
     }
 
     public static WebElement PDF_zoomIn(){
-        element = driver.findElement(By.xpath("//*[@id='zoomIn']"));
+        element = driver.findElement(By.id("zoomIn"));
         return element;
     }
 
     public static WebElement PDF_zoomOut(){
-            element = driver.findElement(By.xpath("//*[@id='zoomOut']"));
+            element = driver.findElement(By.id("zoomOut"));
         return element;
     }
 

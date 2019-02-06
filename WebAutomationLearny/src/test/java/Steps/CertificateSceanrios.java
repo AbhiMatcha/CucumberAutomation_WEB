@@ -1,5 +1,6 @@
 package Steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.JavascriptExecutor;
@@ -245,4 +246,9 @@ public class CertificateSceanrios
         }
     }
 
+    @And("^user able to navigate to sales page on clicking start course$")
+    public void userAbleToNavigateToSalesPageOnClickingStartCourse()
+    {
+        startCourse().click();
+    }
 }

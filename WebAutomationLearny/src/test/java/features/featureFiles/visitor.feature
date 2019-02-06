@@ -2,14 +2,6 @@ Feature: visitor user feature
 
   This feature deals with the functionality of trail user in the application
 
-  Scenario: user as visitor accessing newsfeed
-
-    Given user navigated to homepage of the school
-
-    And user able to see newsfeed option
-
-    And user able to see newsfeeds on click newsfeed option
-
   Scenario: user as visitor accessing login button in home page
 
     Given user navigated to homepage of the school
@@ -19,24 +11,6 @@ Feature: visitor user feature
     And user able to click on login button in homescreen
 
     And user should be navigated to login page
-
-  Scenario: user as visitor accessing help
-
-    Given user navigated to homepage of the school
-
-    And user able to see Help option in home screen
-
-  Scenario: user as visitor accessing offered course tab
-
-    Given user navigated to homepage of the school
-
-    And user able to see offered courses tab for trail user
-
-  Scenario: user as visitor accessing school name in footer
-
-    Given user navigated to homepage of the school
-
-    And user able to see the school name at the footer
 
 #    And user able to search for course
 
@@ -177,10 +151,31 @@ Feature: visitor user feature
   | 9                   | abhi1234        |
 
 
+  Scenario: user as visitor accessing newsfeed
 
+    Given user navigated to homepage of the school
 
+    And user able to see newsfeed option
 
+    And user able to see newsfeeds on click newsfeed option
 
+  Scenario: user as visitor accessing help
+
+    Given user navigated to homepage of the school
+
+    And user able to see Help option in home screen
+
+  Scenario: user as visitor accessing offered course tab
+
+    Given user navigated to homepage of the school
+
+    And user able to see offered courses tab for trail user
+
+  Scenario: user as visitor accessing school name in footer
+
+    Given user navigated to homepage of the school
+
+    And user able to see the school name at the footer
 
 
 

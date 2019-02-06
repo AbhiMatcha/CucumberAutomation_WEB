@@ -127,6 +127,7 @@ public class LeaderBoardScenarios
 
     @And("^user able to click take test button$")
     public void userAbleToClickTakeTestButton() throws InterruptedException {
+        Thread.sleep(AddLongDelay);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         takeTest().click();
         Thread.sleep(AddLongDelay);

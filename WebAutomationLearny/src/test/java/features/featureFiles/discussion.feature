@@ -87,7 +87,7 @@ Feature:  Discussion feature
 
     And user able to select the courses tab
 
-    And user able to select course 'Fill in the blank' to verify discussion module
+    And user able to select course 'Fill in the blank'
 
     Then user should be able to select the discussion tab
 

@@ -74,16 +74,16 @@ public class DiscussionScenarios {
         enterInput().sendKeys(Keys.ENTER);
     }
 
-    @And("^user able to select bundle in MY COURSES section$")
-    public void userAbleToSelectBundleInMYCOURSESSection() {
+    @And("^user able to select bundle$")
+    public void userAbleToSelectBundle() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, Verify_Bundle().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Verify_Bundle().click();
     }
 
-    @And("^user able to select course 'Fill in the blank' to verify discussion module$")
-    public void userAbleToSelectCourseFillInTheBlankToVerifyDiscussionModule() throws InterruptedException
+    @And("^user able to select course 'Fill in the blank'$")
+    public void userAbleToSelectCourseFillInTheBlank() throws InterruptedException
     {
         Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

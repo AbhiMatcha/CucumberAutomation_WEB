@@ -44,6 +44,8 @@ public class utils extends BaseUtil
     public static String long_description ="Best product, Best people. I am really finding Learnyst support very good. Learnyst team is always there to help in case of any query or problem.";
     public static String purchased_text=" PURCHASED";
     public static String Coupon_errorMessage="Coupon entered is not valid";
+    public static String Coupon_expiredMessage="Coupon code has expired";
+
 
     public static String FeedBack_Essay_Ans()
     {
@@ -133,7 +135,7 @@ public class utils extends BaseUtil
 
     protected static String randomCoupon()
     {
-        String selectCoupon[] = {"fifty","yeast","sixty"};
+        String selectCoupon[] = {"fifty","yeast","sixty","expired"};
         Random generator = new Random();
         int randomIndex = generator.nextInt(selectCoupon.length);
         return selectCoupon[randomIndex];

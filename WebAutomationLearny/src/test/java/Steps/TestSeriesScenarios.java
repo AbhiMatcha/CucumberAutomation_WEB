@@ -62,7 +62,7 @@ public class TestSeriesScenarios
     @Then("^user able to see error message or change in price after applying coupon for test series$")
     public void userAbleToSeeErrorMessageOrChangeInPriceAfterApplyingCouponForTestSeries() throws InterruptedException {
         if (Coupon_error().isDisplayed()) {
-            Assert.assertEquals(true, Coupon_error().getText().equals(Coupon_errorMessage));
+            Assert.assertEquals(true, Coupon_error().getText().equals(Coupon_errorMessage)||Coupon_error().getText().equals(Coupon_expiredMessage));
         }
         if ((Integer.parseInt(courseDiscountPrice().getText())) != (TestSeries_discountPrice)) {
             int result = PriceCalculator(TestSeries_discountPrice);
