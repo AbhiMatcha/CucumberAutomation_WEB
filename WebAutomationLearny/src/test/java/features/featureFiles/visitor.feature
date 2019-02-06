@@ -138,6 +138,45 @@ Feature: visitor user feature
 
     And user should be navigated to login page
 
+  Scenario Outline: user as visitor should complete the payment
+
+    Given user navigated to homepage of the school
+
+    And user able to select test series
+
+    And user able to click buy button in sales page
+
+    And user should be navigated to login page
+
+    And user able to select signup option in login page
+
+    And entered email with length <signup_email_length> and <Signup_Password>
+
+    And I tapped on signUp for free button
+
+    Then user should signup or skip the verification
+
+    And user able to redirect to payment page and click pay securely button
+
+    And switch frame before selecting payment
+
+    And user able to enter mobile number
+
+    Then user able to select net banking option
+
+    And user able to select any bank
+
+    Then user able to click on paynow button
+
+    Then user able to see the start course option after completing payment
+
+  Examples:
+
+  | signup_email_length | Signup_Password |
+
+  | 9                   | abhi1234        |
+
+
 
 
 

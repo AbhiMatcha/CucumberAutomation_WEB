@@ -141,4 +141,10 @@ public class LoginScenarios
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         profile_button().click();
     }
+
+    @And("^user able to select signup option in login page$")
+    public void userAbleToSelectSignupOptionInLoginPage()
+    {
+        signup_button().click();
+    }
 }
