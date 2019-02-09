@@ -12,11 +12,4 @@ public class GST_MockTest_repo extends BaseUtil
         element = driver.findElement(By.id("15331"));
         return element;
     }
-
-    public static WebElement GenralQuizMultiplechoice_Ans(){
-        element = driver.findElement(By.xpath(MultipleChoice_RandomAnswers()));
-        return element;
-    }
-
-
 }

@@ -181,8 +181,8 @@ public class DiscussionScenarios {
         Assert.assertEquals(true, select_unLink().isDisplayed());
     }
 
-    @And("^user able to post the question in the discussion$")
-    public void userAbleToPostTheQuestionInTheDiscussion() throws InterruptedException {
+    @And("^user able to post the question$")
+    public void userAbleToPostTheQuestion() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, postInput().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

@@ -1,13 +1,15 @@
 package Steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import java.util.concurrent.TimeUnit;
-
 import static Base.utils.*;
 import static Objects.bundle_repo.*;
-import static Objects.bundle_repo.Bundle_cat_test_Lesson;
 
 public class BundleScenarios
 {
@@ -40,8 +42,8 @@ public class BundleScenarios
         Select_first_lesson().click();
     }
 
-    @And("^user able to selecte pdf Lesson in syllabus section$")
-    public void userAbleToSelectePdfLessonInSyllabusSection() throws InterruptedException {
+    @And("^user able to select pdf Lesson in syllabus section$")
+    public void userAbleToSelectPdfLessonInSyllabusSection() throws InterruptedException {
         Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true, pdf_Lesson().isDisplayed());
@@ -72,8 +74,8 @@ public class BundleScenarios
     }
 
     @Then("^user able to click bookmark option$")
-    public void userAbleToClickBookmarkOption() {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToClickBookmarkOption() throws InterruptedException {
+       Thread.sleep(AddShortDelay);
         Assert.assertEquals(true, PDF_bookMark().isDisplayed());
         PDF_bookMark().click();
 
@@ -191,5 +193,28 @@ public class BundleScenarios
         Assert.assertEquals(true,Bundle_cat_test_Lesson().isDisplayed());
         Bundle_cat_test_Lesson().click();
         Thread.sleep(AddShortDelay);
+    }
+
+    @Then("^user able to select option to change speed$")
+    public void userAbleToSelectOptionToChangeSpeed() throws InterruptedException {
+
+        Actions action = new Actions(driver);
+        action.moveToElement(select_PlaySpeed_video()).perform();
+      }
+
+
+    @Then("^user able to change the speed of the video$")
+    public void userAbleToChangeTheSpeedOfTheVideo() throws InterruptedException {
+        select_random_PlaySpeed_video().click();
+        Thread.sleep(AddLongDelay);
+    }
+
+    @Then("^user able to send report through lesson player$")
+    public void userAbleToSendReportThroughLessonPlayer() throws InterruptedException {
+        send_Logs_Video().click();
+        Thread.sleep(AddShortDelay);
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        confirm_send_Logs_Video().click();
+
     }
 }

@@ -2,7 +2,7 @@ Feature: Syllabus feature
 
   This feature deals with the syllabus functionality of the application
 
-  Scenario Outline: user able to access syllabus tab in course details
+  Scenario Outline: user able to navigate to take test on selecting lesson in syllabus tab
 
     Given I navigate to login page
 
@@ -12,13 +12,11 @@ Feature: Syllabus feature
 
     Then User should login and can see profile
 
-    And user able to select bundle in MY COURSES section
+    And user able to select bundle
 
     And user able to select the courses tab
 
     And user able to select course 'Fill in the blank'
-
-    And user able to see the purchased message in course details
 
     Then user should be able to select the syllabus tab
 
@@ -28,7 +26,7 @@ Feature: Syllabus feature
 
     And user able to see Lesson title in syllabus section
 
-    Then verifu user navigated to take test page
+    Then user should navigate to take test page
 
     Examples:
 

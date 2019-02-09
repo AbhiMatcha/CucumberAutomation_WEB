@@ -2,7 +2,31 @@ Feature: Course details feature
 
   This feature deals with the sales page functionality of the application
 
-  Scenario Outline: user able to access overview tab in course details
+  Scenario Outline: user able to see description of the course
+
+    Given I navigated to signup page
+
+    And entered email with length <signup_email_length> and <Signup_Password>
+
+    And I tapped on signUp for free button
+
+    Then user should signup or skip the verification
+
+    Given user navigated to offered courses
+
+    And user able to select the course
+
+    Then user should be able to select the overview tab
+
+    And user able to see description of the course
+
+    Examples:
+
+      | signup_email_length | Signup_Password |
+
+      | 7                   | abhi1234        |
+
+  Scenario Outline: user able to see actual and discount price for course
 
     Given I navigated to signup page
 
@@ -18,13 +42,27 @@ Feature: Course details feature
 
     Then user should see the actual and discount price for course
 
+    Examples:
+
+      | signup_email_length | Signup_Password |
+
+      | 7                   | abhi1234        |
+
+  Scenario Outline: user able to see the school name
+
+    Given I navigated to signup page
+
+    And entered email with length <signup_email_length> and <Signup_Password>
+
+    And I tapped on signUp for free button
+
+    Then user should signup or skip the verification
+
+    Given user navigated to offered courses
+
+    And user able to select the course
+
     And user able to see the school name at the footer
-
-    Then user should be able to select the overview tab
-
-    And user able to see description of the course
-
-    And user able to see course expiry
 
     Examples:
 
@@ -32,7 +70,7 @@ Feature: Course details feature
 
       | 7                   | abhi1234        |
 
-  Scenario Outline: user able to access syllabus tab in course details
+  Scenario Outline: user able to redirect to payment page after confirming buy option in syllabus section
 
     Given I navigated to signup page
 
@@ -64,7 +102,7 @@ Feature: Course details feature
 
       | 7                   | abhi1234        |
 
-  Scenario Outline: user able to access discussion tab in course details
+  Scenario Outline: user able to redirect to payment page after confirming buy option in discussion section
 
     Given I navigated to signup page
 
@@ -86,16 +124,13 @@ Feature: Course details feature
 
     Then user tapping on confirm button should navigate to payment page
 
-    And user should navigate back to sales page from payment page
-
-
     Examples:
 
       | signup_email_length | Signup_Password |
 
       | 7                   | abhi1234        |
 
-  Scenario Outline: user able to access Notes tab in course details
+  Scenario Outline: user able to redirect to payment page after confirming buy option in notes section
 
     Given I navigated to signup page
 
@@ -117,17 +152,13 @@ Feature: Course details feature
 
     Then user tapping on confirm button should navigate to payment page
 
-    And user should navigate back to sales page from payment page
-
-
     Examples:
 
       | signup_email_length | Signup_Password |
 
       | 7                   | abhi1234        |
 
-
-  Scenario Outline: user able to access certificate tab in course details
+  Scenario Outline: user able to redirect to payment page after confirming buy option in certificate section
 
     Given I navigated to signup page
 
@@ -149,17 +180,13 @@ Feature: Course details feature
 
     Then user tapping on confirm button should navigate to payment page
 
-    And user should navigate back to sales page from payment page
-
-
     Examples:
 
       | signup_email_length | Signup_Password |
 
       | 7                   | abhi1234        |
 
-
-  Scenario Outline: user able to see course details
+  Scenario Outline: user able to see course details and change in price or error message based on coupon entered
 
     Given I navigated to signup page
 
@@ -172,6 +199,10 @@ Feature: Course details feature
     Given user navigated to offered courses
 
     And user able to select the course
+
+    And user able to see course expiry
+
+    Then user able to see the buy button
 
     Then user able to see the buy button
 
@@ -186,3 +217,27 @@ Feature: Course details feature
       | signup_email_length | Signup_Password |
 
       | 7                   | abhi1234        |
+
+  Scenario Outline: user should be able to see purchased message in course details
+
+    Given I navigate to login page
+
+    And I entered <username> and <password>
+
+    And I clicked login button
+
+    Then User should login and can see profile
+
+    And user able to select bundle
+
+    And user able to select the courses tab
+
+    And user able to select course 'Fill in the blank'
+
+    And user able to see the purchased message in course details
+
+    Examples:
+
+      | username                     | password |
+
+      | abhishek.matcha@learnyst.com | abhi1234 |

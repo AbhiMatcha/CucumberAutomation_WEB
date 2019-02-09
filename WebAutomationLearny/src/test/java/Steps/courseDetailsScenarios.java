@@ -1,15 +1,12 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
-
 import java.util.concurrent.TimeUnit;
-
 import static Base.utils.*;
 import static Objects.CourseCertificate_repo.*;
 import static Objects.CourseDiscussion_repo.discussionAsk;
@@ -200,11 +197,11 @@ public class courseDetailsScenarios
     }
 
     @And("^user able to enter the coupon$")
-    public void userAbleToEnterTheCoupon()
-    {
+    public void userAbleToEnterTheCoupon() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true,enterCoupon().isDisplayed());
         enterCoupon().sendKeys(myCoupon);
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to apply the coupon$")
@@ -218,6 +215,7 @@ public class courseDetailsScenarios
     @Then("^user able to see error message or change in price after applying coupon$")
     public void userAbleToSeeErrorMessageOrChangeInPriceAfterApplyingCoupon() throws InterruptedException
     {
+        Thread.sleep(AddShortDelay);
         if (Coupon_error().isDisplayed())
         {
             Assert.assertEquals(true,Coupon_error().getText().equals(Coupon_errorMessage));

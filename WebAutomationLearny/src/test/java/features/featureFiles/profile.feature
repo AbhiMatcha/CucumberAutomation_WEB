@@ -47,7 +47,7 @@ Feature: profile feature
       | 9                   | abhi1234        | abhi12345    | abhi1234      | abhi12345        | New passwords are not matching |
 
 
-  Scenario Outline: user able to edit and save the chagnes in profile page
+  Scenario Outline: user able to edit and save the changes in profile page
 
     When get the email when user signup's in the application
 

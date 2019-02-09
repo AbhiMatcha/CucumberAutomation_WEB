@@ -4,6 +4,8 @@ import Base.BaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static Base.utils.video_speed;
+
 public class bundle_repo extends BaseUtil
 {
 
@@ -54,20 +56,28 @@ public class bundle_repo extends BaseUtil
         return element;
     }
 
+    public static WebElement select_PlaySpeed_video(){
+        element = driver.findElement(By.xpath("//*[@title='Playback Rate']"));
+        return element;
+    }
 
+    public static WebElement select_random_PlaySpeed_video(){
+        element = driver.findElement(By.xpath("//*[@class='vjs-menu-item' and contains(text(),'"+video_speed()+"')]"));
+        return element;
+    }
 
     public static WebElement playVidoeButton(){
         element = driver.findElement(By.className("vjs-big-play-button"));
         return element;
     }
 
-    public static WebElement Verify_videoPDFslides_lesson(){
-        element = driver.findElement(By.xpath("//*[@id='39801']"));
+    public static WebElement send_Logs_Video(){
+        element = driver.findElement(By.id("js-send-logs"));
         return element;
     }
 
-    public static WebElement verify_Test_lesson(){
-        element = driver.findElement(By.xpath("//*[@id='39802']"));
+    public static WebElement confirm_send_Logs_Video(){
+        element = driver.findElement(By.id("js-conform-send-logs"));
         return element;
     }
 

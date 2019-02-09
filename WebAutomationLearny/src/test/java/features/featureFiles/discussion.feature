@@ -12,11 +12,11 @@ Feature:  Discussion feature
 
     Then User should login and can see profile
 
-    And user able to select bundle in MY COURSES section
+    And user able to select bundle
 
     And user able to select the courses tab
 
-    And user able to select course 'Fill in the blank' to verify discussion module
+    And user able to select course 'Fill in the blank'
 
     And user able to see the purchased message in course details
 
@@ -24,7 +24,7 @@ Feature:  Discussion feature
 
     When user able to select ask option in discussion
 
-    Then user able to see the all fields of the redactor page
+#    Then user able to see the all fields of the redactor page
 
     And user able to enter a question as input
 
@@ -52,7 +52,7 @@ Feature:  Discussion feature
 
     And user able to see cancel and confirm option for inserting link
 
-    And user able to post the question in the discussion
+    And user able to post the question
 
     Then user able to the edit option
 
@@ -83,7 +83,7 @@ Feature:  Discussion feature
 
     Given user navigated to offered courses
 
-    And user able to select bundle in MY COURSES section
+    And user able to select bundle
 
     And user able to select the courses tab
 
@@ -100,7 +100,7 @@ Feature:  Discussion feature
       | 7                   | abhi1234        |
 
 
-  Scenario Outline: user able to delete the posted question in disucssion
+  Scenario Outline: user able to delete the posted question in discussion
 
     Given I navigate to login page
 
@@ -110,11 +110,11 @@ Feature:  Discussion feature
 
     Then User should login and can see profile
 
-    And user able to select bundle in MY COURSES section
+    And user able to select bundle
 
     And user able to select the courses tab
 
-    And user able to select course 'Fill in the blank' to verify discussion module
+    And user able to select course 'Fill in the blank'
 
     Then user should be able to select the discussion tab
 

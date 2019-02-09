@@ -17,7 +17,7 @@ public class SyllabusScenario
 
     }
 
-    @Then("^verifu user navigated to take test page$")
+    @Then("^user should navigate to take test page$")
     public void verifuUserNavigatedToTakeTestPage()
     {
         if(takeTest().isDisplayed())

@@ -122,10 +122,10 @@ public class TestSeriesScenarios
     }
 
     @And("^user able to select take test button under chemistry test section in syllabus$")
-    public void userAbleToSelectTakeTestButtonUnderChemistryTestSectionInSyllabus()
-    {
+    public void userAbleToSelectTakeTestButtonUnderChemistryTestSectionInSyllabus() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         TestSeries_chemistry_taketest().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to select take test button under physics test section in syllabus$")
@@ -251,6 +251,7 @@ public class TestSeriesScenarios
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true,(maths.toUpperCase().equals(Analytics_TestTitle().getText())));
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Thread.sleep(AddShortDelay);
         Assert.assertEquals(true,Analytics_viewResult().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Analytics_viewResult().click();

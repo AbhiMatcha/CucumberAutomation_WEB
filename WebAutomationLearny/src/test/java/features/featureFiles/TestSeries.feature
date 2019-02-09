@@ -54,6 +54,7 @@ Feature: Test series feature
 
       | 9                   | abhi1234        |
 
+
   Scenario Outline: user able to do payment for Test series
 
     Given I navigated to signup page

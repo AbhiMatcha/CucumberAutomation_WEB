@@ -59,4 +59,10 @@ public class NotesSceanrio {
         Assert.assertEquals(true, enterInput().isDisplayed());
         Thread.sleep(AddShortDelay);
     }
+
+    @Then("^user able to see the input as a note$")
+    public void userAbleToSeeTheInputAsANote()
+    {
+        Assert.assertEquals(true,!(enterInput().getText()).equals(""));
+    }
 }

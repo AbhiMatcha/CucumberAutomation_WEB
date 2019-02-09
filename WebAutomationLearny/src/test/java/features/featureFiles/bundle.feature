@@ -22,27 +22,7 @@ Feature: bundle feature
 
       | abhishek.matcha@learnyst.com | abhi1234 |
 
-  Scenario Outline: user able to see courses tab for  bundle
-
-    Given I navigate to login page
-
-    And I entered <username> and <password>
-
-    And I clicked login button
-
-    Then User should login and can see profile
-
-    And user able to select bundle
-
-    And user able to select the courses tab
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user able to play video
+  Scenario Outline: user able to access all options in pdf
 
     Given I navigate to login page
 
@@ -60,36 +40,7 @@ Feature: bundle feature
 
     Then user able to select first lesson under syllabus tab
 
-    And user able to selecte video Lesson in syllabus section
-
-    Then user able to play the video
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-
-  Scenario Outline: user able to view pdf
-
-    Given I navigate to login page
-
-    And I entered <username> and <password>
-
-    And I clicked login button
-
-    Then User should login and can see profile
-
-    And user able to select bundle
-
-    And user able to select the courses tab
-
-    And user able to select course 'Verify_CourseVideo_Test'
-
-    Then user able to select first lesson under syllabus tab
-
-    And user able to selecte pdf Lesson in syllabus section
+    And user able to select pdf Lesson in syllabus section
 
     And switch frame to access pdf lesson
 
@@ -113,7 +64,8 @@ Feature: bundle feature
 
       | abhishek.matcha@learnyst.com | abhi1234 |
 
-  Scenario Outline: user able to view slides
+
+  Scenario Outline:  user able to access all options in slide and move to next lesson on selecting mark as complete option
 
     Given I navigate to login page
 
@@ -230,7 +182,7 @@ Feature: bundle feature
       | abhishek.matcha@learnyst.com | abhi1234 |
 
 
-  Scenario Outline: user able to access the lesson after completing payment
+  Scenario Outline: user as a trail user able to access the lesson after completing payment
 
     Given I navigated to signup page
 
@@ -282,3 +234,66 @@ Feature: bundle feature
 
       | 7                   | abhi1234        |
 
+  Scenario Outline: user able to change the play speed of the video
+
+    Given I navigate to login page
+
+    And I entered <username> and <password>
+
+    And I clicked login button
+
+    Then User should login and can see profile
+
+    And user able to select bundle
+
+    And user able to select the courses tab
+
+    And user able to select course 'Verify_CourseVideo_Test'
+
+    Then user able to select first lesson under syllabus tab
+
+    And user able to selecte video Lesson in syllabus section
+
+    Then user able to play the video
+
+    Then user able to select option to change speed
+
+    Then user able to change the speed of the video
+
+    Examples:
+
+      | username                     | password |
+
+      | abhishek.matcha@learnyst.com | abhi1234 |
+
+  Scenario Outline: user able to send report in lesson player
+
+    Given I navigate to login page
+
+    And I entered <username> and <password>
+
+    And I clicked login button
+
+    Then User should login and can see profile
+
+    And user able to select bundle
+
+    And user able to select the courses tab
+
+    And user able to select course 'Verify_CourseVideo_Test'
+
+    Then user able to select first lesson under syllabus tab
+
+    And user able to selecte video Lesson in syllabus section
+
+    Then user able to play the video
+
+    Then user able to send report through lesson player
+
+    And user able to confirm the alert
+
+    Examples:
+
+      | username                     | password |
+
+      | abhishek.matcha@learnyst.com | abhi1234 |

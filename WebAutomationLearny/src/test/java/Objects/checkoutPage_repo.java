@@ -57,7 +57,7 @@ public class checkoutPage_repo extends BaseUtil
     }
 
     public static WebElement refundPolicy(){
-        element = driver.findElement(By.xpath(" //*[@id='learnyContent']/div/div/div/div/div[2]/div[3]/div/a"));
+        element = driver.findElement(By.xpath("//*[@id='learnyContent']/div/div/div/div/div[2]/div[3]/div/a"));
         return element;
     }
 

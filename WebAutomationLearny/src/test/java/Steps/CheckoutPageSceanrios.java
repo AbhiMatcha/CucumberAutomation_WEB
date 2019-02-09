@@ -115,8 +115,8 @@ public class CheckoutPageSceanrios
     }
 
     @And("^user able to see the refund policy$")
-    public void userAbleToSeeTheRefundPolicy()
-    {
+    public void userAbleToSeeTheRefundPolicy() throws InterruptedException {
+        Thread.sleep(AddShortDelay);
         Assert.assertEquals(true,refundPolicy().isDisplayed());
     }
 }
