@@ -3,6 +3,7 @@ package Steps;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import cucumber.runtime.StopWatch;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -216,5 +217,43 @@ public class BundleScenarios
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         confirm_send_Logs_Video().click();
 
+    }
+
+    @And("^user able to see video in full screen view$")
+    public void userAbleToSeeVideoInFullScreenView()
+    {
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        fullScreen().click();
+    }
+
+    @And("^user able to see the remaining time of the video$")
+    public void userAbleToSeeTheRemainingTimeOfTheVideo() throws InterruptedException {
+        String getbeforeTime=remainingTime().getText();
+        String[] getpresent=getbeforeTime.split("\n" +
+                "");
+        String getPresntTime=getpresent[1];
+
+        Thread.sleep(10000);
+
+        String getafterTime=remainingTime().getText();
+        String[] getafter=getbeforeTime.split("\n" +
+                "");
+        String timeafteruserwatched=getafter[1];
+
+        int result= Integer.valueOf(getPresntTime)-Integer.valueOf(timeafteruserwatched);
+
+        String finalTime=remainingTime().getText();
+        String[] storeFinalTime=finalTime.split("\n" +
+                "");
+        int finalTimeVideo= Integer.valueOf(storeFinalTime[1]);
+        System.out.println(result==finalTimeVideo);
+
+
+
+
+//
+//
+//        System.out.println(getTime[0]);
+//        System.out.println(getTime[1]);
     }
 }

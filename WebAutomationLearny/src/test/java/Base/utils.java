@@ -11,7 +11,6 @@ public class utils extends BaseUtil
     public static int GST_Amount=(GST_actualPrice*18)/100;
     public static String userName="Abhishek";
     public static int MockTest_discountPrice =800;
-    public static int defaultLength=7;
     public static int TestSeries_discountPrice =100;
     public static String myCoupon=randomCoupon();
     public static String scheduledTime="6th Apr, 2052";
@@ -20,8 +19,9 @@ public class utils extends BaseUtil
     public static String schoolName="QualiCenter";
     public static String EnterPassword="abhi1234";
     public static String MobileNumber="9494900017";
-    public static String email = "abhishek.matcha@learnyst.com";
+    public static String Login_email = "abhishek.matcha@learnyst.com";
     public static String Fb_email="tsetapp@gmail.com";
+    public static int Signup_Email_length=9;
     public static String password="abhi1234";
     public static String google_email="testAppLearnyst@gmail.com";
     public static String google_password="learnyst***";
@@ -36,7 +36,7 @@ public class utils extends BaseUtil
     public static String Insert_textLink ="for testing";
     public static String ticket_Title="This is my title for ticket";
     public static String ticket_Description="This is the long_description for testing in the ticket";
-    public static String Passwords[] ={"abhi12345","abhi1234"};
+//    public static String Passwords[] ={"abhi12345","abhi1234"};
     public static String pincode= "560098";
     public static String address1= "#110, 1st main";
     public static String address2= "sri krishna garden layout";

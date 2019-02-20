@@ -112,7 +112,7 @@ Feature: visitor user feature
 
     And user should be navigated to login page
 
-  Scenario Outline: user as visitor should complete the payment
+  Scenario: user as visitor should complete the payment
 
     Given user navigated to homepage of the school
 
@@ -124,7 +124,7 @@ Feature: visitor user feature
 
     And user able to select signup option in login page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -143,13 +143,6 @@ Feature: visitor user feature
     Then user able to click on paynow button
 
     Then user able to see the start course option after completing payment
-
-  Examples:
-
-  | signup_email_length | Signup_Password |
-
-  | 9                   | abhi1234        |
-
 
   Scenario: user as visitor accessing newsfeed
 

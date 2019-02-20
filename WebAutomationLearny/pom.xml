@@ -164,6 +164,7 @@
         </dependency>
 
         <!-- REPORTING -->
+
         <dependency>
 
             <groupId>com.googlecode.totallylazy</groupId>
@@ -380,7 +381,7 @@
                             <receivers>
                                 <!-- To Email address -->
                                 <receiver>abhishek.matcha@learnyst.com</receiver>
-                                <!--<receiver>shankar@learnyst.com</receiver>-->
+                                <receiver>shankar@learnyst.com</receiver>
 
                             </receivers>
 

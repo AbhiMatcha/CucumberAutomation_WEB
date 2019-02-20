@@ -38,6 +38,17 @@ public class LoginScenarios
             login_password().sendKeys(password);
     }
 
+//    @And("^I entered login username and login password$")
+//    public void iEnteredLoginUsernameAndLoginPassword()
+//    {
+//        Assert.assertEquals(login_email().isDisplayed(),true);
+//        login_email().clear();
+//        login_email().sendKeys(Login_email);
+//        Assert.assertEquals(login_password().isDisplayed(),true);
+//        login_password().clear();
+//        login_password().sendKeys(password);
+//    }
+
     @And("^I clicked login button$")
     public void iClickedLoginButton()
     {
@@ -146,5 +157,15 @@ public class LoginScenarios
     public void userAbleToSelectSignupOptionInLoginPage()
     {
         signup_button().click();
+    }
+
+    @And("^In login page user entered login username and login password$")
+    public void inLoginPageUserEnteredLoginUsernameAndLoginPassword() throws Throwable {
+        Assert.assertEquals(login_email().isDisplayed(),true);
+        login_email().clear();
+        login_email().sendKeys(Login_email);
+        Assert.assertEquals(login_password().isDisplayed(),true);
+        login_password().clear();
+        login_password().sendKeys(password);
     }
 }

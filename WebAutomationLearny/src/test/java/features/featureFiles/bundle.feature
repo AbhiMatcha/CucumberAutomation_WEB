@@ -2,31 +2,11 @@ Feature: bundle feature
 
   This feature deals with the bundle feature functionality of the application
 
-  Scenario Outline: user able to see expiry date for bundle
+  Scenario: user able to access all options in pdf
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
-
-    And I clicked login button
-
-    Then User should login and can see profile
-
-    And user able to select bundle
-
-    And user able to see course expiry
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user able to access all options in pdf
-
-    Given I navigate to login page
-
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -58,18 +38,11 @@ Feature: bundle feature
 
     Then user able to click find option
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-
-  Scenario Outline:  user able to access all options in slide and move to next lesson on selecting mark as complete option
+  Scenario:  user able to access all options in slide and move to next lesson on selecting mark as complete option
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -105,17 +78,11 @@ Feature: bundle feature
 
     Then user able to move to next lesson on selecting mark as complete
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user able to take test in bundle
+  Scenario: user able to take test in bundle
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -175,18 +142,11 @@ Feature: bundle feature
 
     And user able to solutions button after completing test
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-
-  Scenario Outline: user as a trail user able to access the lesson after completing payment
+  Scenario: user as a trail user able to access the lesson after completing payment
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -228,17 +188,11 @@ Feature: bundle feature
 
     Then user able to play the video
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to change the play speed of the video
+  Scenario: user able to change the play and change the speed of the video
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -260,17 +214,59 @@ Feature: bundle feature
 
     Then user able to change the speed of the video
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user able to send report in lesson player
+  Scenario: user able to view the video in full screen mode
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
+
+    And I clicked login button
+
+    Then User should login and can see profile
+
+    And user able to select bundle
+
+    And user able to select the courses tab
+
+    And user able to select course 'Verify_CourseVideo_Test'
+
+    Then user able to select first lesson under syllabus tab
+
+    And user able to selecte video Lesson in syllabus section
+
+    Then user able to play the video
+
+    And user able to see video in full screen view
+
+  Scenario: user able to see the remaining time of the video
+
+    Given I navigate to login page
+
+    And In login page user entered login username and login password
+
+    And I clicked login button
+
+    Then User should login and can see profile
+
+    And user able to select bundle
+
+    And user able to select the courses tab
+
+    And user able to select course 'Verify_CourseVideo_Test'
+
+    Then user able to select first lesson under syllabus tab
+
+    And user able to selecte video Lesson in syllabus section
+
+    Then user able to play the video
+
+    And user able to see the remaining time of the video
+
+  Scenario: user able to send report in lesson player
+
+    Given I navigate to login page
+
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -291,9 +287,3 @@ Feature: bundle feature
     Then user able to send report through lesson player
 
     And user able to confirm the alert
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |

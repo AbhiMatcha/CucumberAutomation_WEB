@@ -2,22 +2,15 @@ Feature: Signup feature
 
   This feature deals with the Signup functionality of the application
 
-  Scenario Outline: user able to signup with valid details
+  Scenario: user able to signup with valid details
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
     Then user should signup or skip the verification
-
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
 
   Scenario Outline: user able to signup with invalid details
 

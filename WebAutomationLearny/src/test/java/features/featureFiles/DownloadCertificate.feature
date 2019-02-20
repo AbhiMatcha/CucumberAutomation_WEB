@@ -2,11 +2,11 @@ Feature: Download certificate by taking practise test & payment feature
 
   This feature deals with validating the details under certificate tab, payment, Download certificate functionality when user is eligible
 
-  Scenario Outline: user able to see the details under cerificate tab
+  Scenario: user able to see the details under cerificate tab
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -26,18 +26,12 @@ Feature: Download certificate by taking practise test & payment feature
 
     And user able to see the test status under certificate section
 
-    Examples:
 
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-
-  Scenario Outline: user able to do payment through certificate tab
+  Scenario: user able to do payment through certificate tab
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -67,18 +61,11 @@ Feature: Download certificate by taking practise test & payment feature
 
     Then user able to see the start course option after completing payment
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-
-  Scenario Outline: user able to download certificate by taking test
+  Scenario: user able to download certificate by taking test
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -137,10 +124,3 @@ Feature: Download certificate by taking practise test & payment feature
     And user should be navigated to sales page and select certificate tab
 
     Then user able to download the certificate if he is eligible
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-

@@ -5,9 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.By;
 import org.testng.Assert;
-
 import java.util.concurrent.TimeUnit;
-
 import static Base.utils.*;
 import static Objects.homeScreen_repo.SkipVerification;
 import static Objects.login_repo.pop_up;
@@ -42,6 +40,18 @@ public class SignupScenarios {
         signup_password().sendKeys(password);
     }
 
+
+//    @And("^entered email with signup_email and Signup_Password$")
+//    public void userEnteredEmailWithLengthSignup_emailAndSignup_Password()
+//    {
+//        Assert.assertEquals(signup_mail().isDisplayed(), true);
+//        signup_mail().clear();
+//        signup_mail().sendKeys(randomEmail(Signup_Email_length));
+//        Assert.assertEquals(signup_password().isDisplayed(), true);
+//        signup_password().clear();
+//        signup_password().sendKeys(password);
+//    }
+
     @And("^I tapped on signUp for free button$")
     public void iTappedOnSignUpForFreeButton()
     {
@@ -69,5 +79,16 @@ public class SignupScenarios {
         pop_up().getText().equals(errorMessage);
         Thread.sleep(5000);
 
+    }
+
+    @And("^entered email with signup_email and Signup_Password$")
+    public void enteredEmailWithSignup_emailAndSignup_Password()
+    {
+        Assert.assertEquals(signup_mail().isDisplayed(), true);
+        signup_mail().clear();
+        signup_mail().sendKeys(randomEmail(Signup_Email_length));
+        Assert.assertEquals(signup_password().isDisplayed(), true);
+        signup_password().clear();
+        signup_password().sendKeys(password);
     }
 }

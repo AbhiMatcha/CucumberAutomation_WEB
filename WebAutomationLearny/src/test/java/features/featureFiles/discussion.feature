@@ -2,11 +2,11 @@ Feature:  Discussion feature
 
   This feature deals with the discussion page functionality of the application
 
-  Scenario Outline: user should be post the question using all options in redactor
+  Scenario: user should be post the question using all options in redactor
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -23,8 +23,6 @@ Feature:  Discussion feature
     Then user should be able to select the discussion tab
 
     When user able to select ask option in discussion
-
-#    Then user able to see the all fields of the redactor page
 
     And user able to enter a question as input
 
@@ -64,18 +62,11 @@ Feature:  Discussion feature
 
     Then user able to view the replies posted
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-
-  Scenario Outline: user able to view the posted question by another user
+  Scenario: user able to view the posted question by another user
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -93,18 +84,11 @@ Feature:  Discussion feature
 
     And another user able to see the posted question
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-
-  Scenario Outline: user able to delete the posted question in discussion
+  Scenario: user able to delete the posted question in discussion
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -121,10 +105,3 @@ Feature:  Discussion feature
     And user able to see the delete button in discussion
 
     And user able to delete the posted question
-
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |

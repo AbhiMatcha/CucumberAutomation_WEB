@@ -2,11 +2,11 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
   This feature deals with validating the test details, Scheduled test, Expired test & LeaderBoard functionality once user complete CAT test in the application
 
-  Scenario Outline: user able to see the test details
+  Scenario: user able to see the test details
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -34,17 +34,11 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
     Then verify test level contains some value
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to see the LeaderBoard details
+  Scenario: user able to see the LeaderBoard details
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -62,17 +56,12 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
     And user able to see score under leader board section
 
-    Examples:
 
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to take the CAT Test
+  Scenario: user able to take the CAT Test
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -142,53 +131,5 @@ Feature: LeaderBoard, CAT Test, Test deatils feature
 
 #    Then the details of top ten students should match both in result page and sales page
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to see the details of expired course
-
-    Given I navigated to signup page
-
-    And entered email with length <signup_email_length> and <Signup_Password>
-
-    And I tapped on signUp for free button
-
-    Then user should signup or skip the verification
-
-    Given user navigated to offered courses
-
-    And user should be able to select the expired mock test
-
-    And user able to see the expired message for particular mock test
-
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
 
 
-  Scenario Outline: user able to see the details scheduled course
-
-    Given I navigated to signup page
-
-    And entered email with length <signup_email_length> and <Signup_Password>
-
-    And I tapped on signUp for free button
-
-    Then user should signup or skip the verification
-
-    Given user navigated to offered courses
-
-    And user should be able to select the scheduled mock test
-
-    And user able to see the scheduled time for particular mock test
-
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |

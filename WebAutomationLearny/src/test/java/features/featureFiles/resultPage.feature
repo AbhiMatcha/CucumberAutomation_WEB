@@ -2,11 +2,11 @@ Feature: Result page feature
 
   This feature deals with result page functionality of the application
 
-  Scenario Outline: user able to see all the options in result page
+  Scenario: user able to see all the options in result page
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -49,9 +49,3 @@ Feature: Result page feature
     And user able to navigate back
 
     And user able to solutions button after completing test
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |

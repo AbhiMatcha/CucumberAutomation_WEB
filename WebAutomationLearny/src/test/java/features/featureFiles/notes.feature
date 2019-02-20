@@ -2,11 +2,11 @@ Feature: Notes feature
 
   This feature deals with the notes page functionality of the application
 
-  Scenario Outline: user should be able to select bold option and enter note
+  Scenario: user should be able to select bold option and enter note
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -26,18 +26,11 @@ Feature: Notes feature
 
     Then user able to see the input as a note
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-
-  Scenario Outline: user should be able to select italic option and enter note
+  Scenario: user should be able to select italic option and enter note
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -57,17 +50,11 @@ Feature: Notes feature
 
     Then user able to see the input as a note
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user should be able to select underline option and enter note
+  Scenario: user should be able to select underline option and enter note
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -87,17 +74,13 @@ Feature: Notes feature
 
     Then user able to see the input as a note
 
-    Examples:
+    And In login page user entered login username and login password
 
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user should be able to select list option
+  Scenario: user should be able to select list option
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -119,18 +102,11 @@ Feature: Notes feature
 
     And user able to select list option in redactor
 
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user should be able to see unlink option
+  Scenario: user should be able to see unlink option
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -158,17 +134,11 @@ Feature: Notes feature
 
     Then user able to see unlink option
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user should be able to select insert link option and enter note
+  Scenario: user should be able to select insert link option and enter note
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -194,17 +164,11 @@ Feature: Notes feature
 
     Then user able to see the input as a note
 
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
-  Scenario Outline: user should be able to edit and delete the note created
+  Scenario: user should be able to edit and delete the note created
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -257,9 +221,3 @@ Feature: Notes feature
     And user able to edit the input and post the question
 
    And user able to delete the notes
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |

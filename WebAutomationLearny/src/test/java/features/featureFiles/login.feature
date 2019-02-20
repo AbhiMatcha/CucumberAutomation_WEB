@@ -22,22 +22,15 @@ Feature: LoginFeature
 
     Then click on send button and verify message displayed
 
-  Scenario Outline: user able to Login with valid details
+  Scenario: user able to Login with valid details
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
     Then User should login and can see profile
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
-
 
   Scenario Outline: user able to see error messages in login page on entering invalid inputs
 
@@ -63,11 +56,11 @@ Feature: LoginFeature
 
       | 23344555                     | abh345    | Please enter valid email             |
 
-  Scenario Outline: user able to logout
+  Scenario: user able to logout
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -76,12 +69,6 @@ Feature: LoginFeature
     And user able to select profile
 
     Then  user should be able to logout
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |
 
 
 

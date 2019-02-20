@@ -2,11 +2,11 @@ Feature: Mock test feature
 
   This feature deals with the all test functionality of the application
 
-  Scenario Outline: user able to take general quiz
+  Scenario: user able to take general quiz
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -44,17 +44,11 @@ Feature: Mock test feature
 
     And user able to solutions button after completing test
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to take Gmat test
+  Scenario: user able to take Gmat test
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -122,17 +116,11 @@ Feature: Mock test feature
 
     And user able to navigate back and see the mock test status as evaluation pending
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to take the practise quiz
+  Scenario: user able to take the practise quiz
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -176,17 +164,11 @@ Feature: Mock test feature
 
     And user able to solutions button after completing test
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to take the Random quiz and questions should not get repeat in same order while retaking the test
+  Scenario: user able to take the Random quiz and questions should not get repeat in same order while retaking the test
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -290,17 +272,11 @@ Feature: Mock test feature
 
     Then verify user able to see the shuffled questions while retaking the test
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to use all options(section naviagation, mark for review, Read instructions) while taking IITjee test
+  Scenario: user able to use all options(section naviagation, mark for review, Read instructions) while taking IITjee test
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -390,17 +366,11 @@ Feature: Mock test feature
 
     And user able to solutions button after completing test
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to take the CAT Test
+  Scenario: user able to take the CAT Test
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -461,9 +431,3 @@ Feature: Mock test feature
     And user able to confirm the submit
 
     Then collect the details the top ten students in result page under leaderboard section
-
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |

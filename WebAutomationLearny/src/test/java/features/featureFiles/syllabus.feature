@@ -2,11 +2,11 @@ Feature: Syllabus feature
 
   This feature deals with the syllabus functionality of the application
 
-  Scenario Outline: user able to navigate to take test on selecting lesson in syllabus tab
+  Scenario: user able to navigate to take test on selecting lesson in syllabus tab
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -27,9 +27,3 @@ Feature: Syllabus feature
     And user able to see Lesson title in syllabus section
 
     Then user should navigate to take test page
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |

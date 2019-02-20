@@ -2,11 +2,11 @@ Feature: checkout feature
 
   This feature deals with the checkout page functionality of the application
 
-  Scenario Outline: user able to save the information of address form
+  Scenario: user able to save the information of address form
 
     Given I navigated to signup page for GST enable school
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -36,17 +36,11 @@ Feature: checkout feature
 
     And user able to save the details entered in the address form
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-  Scenario Outline: user able to see the change in price or error message after applying coupon for GST enabled school
+  Scenario: user able to see the change in price or error message after applying coupon for GST enabled school
 
     Given I navigated to signup page for GST enable school
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -83,9 +77,3 @@ Feature: checkout feature
     Then user able to see error message or change in price after applying coupon in GST enabled school
 
     And user able to see the refund policy
-
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |

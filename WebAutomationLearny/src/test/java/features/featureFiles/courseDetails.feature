@@ -2,11 +2,11 @@ Feature: Course details feature
 
   This feature deals with the sales page functionality of the application
 
-  Scenario Outline: user able to see description of the course
+  Scenario: user able to see description of the course
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -20,17 +20,11 @@ Feature: Course details feature
 
     And user able to see description of the course
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to see actual and discount price for course
+  Scenario: user able to see actual and discount price for course
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -42,17 +36,11 @@ Feature: Course details feature
 
     Then user should see the actual and discount price for course
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to see the school name
+  Scenario: user able to see the school name
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -64,17 +52,12 @@ Feature: Course details feature
 
     And user able to see the school name at the footer
 
-    Examples:
 
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to redirect to payment page after confirming buy option in syllabus section
+  Scenario: user able to redirect to payment page after confirming buy option in syllabus section
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -96,17 +79,11 @@ Feature: Course details feature
 
     And user should navigate back to sales page from payment page
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to redirect to payment page after confirming buy option in discussion section
+  Scenario: user able to redirect to payment page after confirming buy option in discussion section
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -124,17 +101,11 @@ Feature: Course details feature
 
     Then user tapping on confirm button should navigate to payment page
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to redirect to payment page after confirming buy option in notes section
+  Scenario: user able to redirect to payment page after confirming buy option in notes section
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -152,17 +123,11 @@ Feature: Course details feature
 
     Then user tapping on confirm button should navigate to payment page
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to redirect to payment page after confirming buy option in certificate section
+  Scenario: user able to redirect to payment page after confirming buy option in certificate section
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -180,17 +145,11 @@ Feature: Course details feature
 
     Then user tapping on confirm button should navigate to payment page
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user able to see course details and change in price or error message based on coupon entered
+  Scenario: user able to see course details and change in price or error message based on coupon entered
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -212,17 +171,11 @@ Feature: Course details feature
 
     Then user able to see error message or change in price after applying coupon
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 7                   | abhi1234        |
-
-  Scenario Outline: user should be able to see purchased message in course details
+  Scenario: user should be able to see purchased message in course details
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -236,8 +189,49 @@ Feature: Course details feature
 
     And user able to see the purchased message in course details
 
-    Examples:
+  Scenario: user able to see expiry date for bundle
 
-      | username                     | password |
+    Given I navigate to login page
 
-      | abhishek.matcha@learnyst.com | abhi1234 |
+    And In login page user entered login username and login password
+
+    And I clicked login button
+
+    Then User should login and can see profile
+
+    And user able to select bundle
+
+    And user able to see course expiry
+
+  Scenario: user able to see the details scheduled course
+
+    Given I navigated to signup page
+
+    And entered email with signup_email and Signup_Password
+
+    And I tapped on signUp for free button
+
+    Then user should signup or skip the verification
+
+    Given user navigated to offered courses
+
+    And user should be able to select the scheduled mock test
+
+    And user able to see the scheduled time for particular mock test
+
+  Scenario: user able to see the details of expired course
+
+    Given I navigated to signup page
+
+    And entered email with signup_email and Signup_Password
+
+    And I tapped on signUp for free button
+
+    Then user should signup or skip the verification
+
+    Given user navigated to offered courses
+
+    And user should be able to select the expired mock test
+
+    And user able to see the expired message for particular mock test
+

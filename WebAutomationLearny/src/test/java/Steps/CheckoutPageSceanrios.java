@@ -100,6 +100,7 @@ public class CheckoutPageSceanrios
     @Then("^user able to see error message or change in price after applying coupon in GST enabled school$")
     public void userAbleToSeeErrorMessageOrChangeInPriceAfterApplyingCouponInGSTEnabledSchool() throws InterruptedException
     {
+        Thread.sleep(AddShortDelay);
         if (Coupon_error().isDisplayed())
         {
             Coupon_error().getText().equals(Coupon_errorMessage);

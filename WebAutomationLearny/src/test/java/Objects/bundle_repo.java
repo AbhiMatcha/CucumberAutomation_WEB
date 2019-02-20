@@ -81,13 +81,6 @@ public class bundle_repo extends BaseUtil
         return element;
     }
 
-
-
-    public static WebElement test_lesson(){
-        element = driver.findElement(By.xpath("//h4[contains(text(),'Mock CAT Paper 1')]"));
-        return element;
-    }
-
     public static WebElement previous_button(){
         element = driver.findElement(By.id("previousLesson"));
         return element;
@@ -95,20 +88,6 @@ public class bundle_repo extends BaseUtil
 
     public static WebElement next_button(){
         element = driver.findElement(By.id("nextLesson"));
-        return element;
-    }
-    public static WebElement ok_button(){
-        element = driver.findElement(By.id("primaryAction"));
-        return element;
-    }
-
-    public static WebElement haha(){
-        element = driver.findElement(By.xpath("//*[@id='lstSliderPlayer-0ETEPP2_Youtube_api']"));
-        return element;
-    }
-
-    public static WebElement play_button(){
-        element = driver.findElement(By.xpath("//*[@aria-label='Play']"));
         return element;
     }
 
@@ -185,5 +164,12 @@ public class bundle_repo extends BaseUtil
         element = driver.findElement(By.id("secondaryAction"));
         return element;
     }
+
+    public static WebElement remainingTime(){
+        element = driver.findElement(By.className("vjs-remaining-time-display"));
+        return element;
+    }
+
+
 
 }

@@ -2,11 +2,11 @@ Feature: Support feature
 
   This feature deals with the support functionality of the application
 
-  Scenario Outline: User able to raise a support ticket
+  Scenario: User able to raise a support ticket
 
     Given I navigate to login page
 
-    And I entered <username> and <password>
+    And In login page user entered login username and login password
 
     And I clicked login button
 
@@ -31,10 +31,3 @@ Feature: Support feature
     And user should be able to confrim the submission of the raised ticket
 
     Then User should login and can see profile
-
-
-    Examples:
-
-      | username                     | password |
-
-      | abhishek.matcha@learnyst.com | abhi1234 |

@@ -2,11 +2,11 @@ Feature: Test series feature
 
   This feature deals with validating Test series functionality in the application
 
-  Scenario Outline: user able to see the Test series details in sales page
+  Scenario: user able to see the Test series details in sales page
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -48,18 +48,11 @@ Feature: Test series feature
 
     Then user able to see the buy button
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-
-  Scenario Outline: user able to do payment for Test series
+  Scenario: user able to do payment for Test series
 
     Given I navigated to signup page
 
-    And entered email with length <signup_email_length> and <Signup_Password>
+    And entered email with signup_email and Signup_Password
 
     And I tapped on signUp for free button
 
@@ -87,18 +80,11 @@ Feature: Test series feature
 
     And user should navigate back to sales page from payment page and select syllabus tab
 
-    Examples:
-
-      | signup_email_length | Signup_Password |
-
-      | 9                   | abhi1234        |
-
-
-    Scenario Outline: user able to take test through syllabus for Test series
+    Scenario: user able to take test through syllabus for Test series
 
       Given I navigated to signup page
 
-      And entered email with length <signup_email_length> and <Signup_Password>
+      And entered email with signup_email and Signup_Password
 
       And I tapped on signUp for free button
 
@@ -221,9 +207,3 @@ Feature: Test series feature
       And user should be able to select the analytics tab
 
       And user able to see the information of each section under analytics tab
-
-      Examples:
-
-        | signup_email_length | Signup_Password |
-
-        | 9                   | abhi1234        |
