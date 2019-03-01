@@ -1,6 +1,9 @@
-<suite name="AutomationScripts" parallel="tests" thread-count="1" >
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-    <test name="Automation">
+<suite name="AutomationScripts" parallel="tests" thread-count="1" configfailurepolicy="continue" >
+
+    <test name="Automation"  annotations="JDK" >
 
         <parameter name="Sanity" value="Test one"/>
 

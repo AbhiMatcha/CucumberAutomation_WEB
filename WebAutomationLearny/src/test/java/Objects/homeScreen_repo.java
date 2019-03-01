@@ -101,7 +101,7 @@ public class homeScreen_repo extends BaseUtil
     }
 
     public static WebElement Login_Homescreen_Visitor(){
-        element = driver.findElement(By.id("nav-sign-up"));
+        element = driver.findElement(By.id("nav-sign-u"));
         return element;
     }
 

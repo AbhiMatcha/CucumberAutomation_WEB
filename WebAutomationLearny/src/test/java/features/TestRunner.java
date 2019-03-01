@@ -12,6 +12,6 @@ import org.junit.runner.RunWith;
         plugin = {"com.cucumber.listener.ExtentCucumberFormatter:target/site/cucumber-reports/report.html"},
         monochrome = true
 )
-public class TestRunner {
-
+public class TestRunner
+{
 }

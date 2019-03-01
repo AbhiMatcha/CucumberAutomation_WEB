@@ -1,12 +1,10 @@
 package Steps;
 
 import Objects.forgotPassword_repo;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import java.util.Iterator;
 import java.util.Set;
@@ -61,7 +59,6 @@ public class LoginScenarios
     {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(profile_button().isDisplayed(),true);
-
     }
 
     @Then("^([^\"]*) message should be displayed$")
@@ -73,8 +70,8 @@ public class LoginScenarios
     }
 
     @And("^user completed facebook login$")
-    public void userCompletedFacebookLogin() throws InterruptedException {
-
+    public void userCompletedFacebookLogin() throws InterruptedException
+    {
         Assert.assertEquals(true,Fb_button().isDisplayed());
         Fb_button().click();
         Thread.sleep(4000);
@@ -102,7 +99,6 @@ public class LoginScenarios
          */
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
-
 
     @Then("^selected forgot password$")
     public void selectedForgotPassword()
@@ -167,5 +163,23 @@ public class LoginScenarios
         Assert.assertEquals(login_password().isDisplayed(),true);
         login_password().clear();
         login_password().sendKeys(password);
+    }
+
+    @And("^enter invalid email to send reset password link$")
+    public void enterInvalidEmailToSendResetPasswordLink()
+    {
+        Assert.assertEquals(true, forgot_PasswordEmail().isDisplayed());
+        forgot_PasswordEmail().click();
+        forgot_PasswordEmail().sendKeys(invalid_email);
+    }
+
+    @Then("^error email not found pop up should be displayed on tapping send option$")
+    public void errorEmailNotFoundPopUpShouldBeDisplayedOnTappingSendOption() {
+        Assert.assertEquals(true, forgotPassword_Send().isDisplayed());
+        forgotPassword_Send().click();
+        Assert.assertEquals(true, forgotPassword_Popup().isDisplayed());
+        String PopupMessage=forgotPassword_Popup().getText();
+        Assert.assertEquals(true,PopupMessage.equals(forgotPassword_repo.forgotPassword_errorMessage));
+        confirmAlert().click();
     }
 }

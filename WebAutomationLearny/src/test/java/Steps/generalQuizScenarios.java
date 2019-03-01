@@ -1,6 +1,5 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 
 import static Objects.GeneralQuiz_repo.generalQuiz;

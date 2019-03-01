@@ -13,6 +13,8 @@ public class utils extends BaseUtil
     public static int MockTest_discountPrice =800;
     public static int TestSeries_discountPrice =100;
     public static String myCoupon=randomCoupon();
+    public static String invalidCoupon="yeast";
+    public static String expiredCoupon="expired";
     public static String scheduledTime="6th Apr, 2052";
     public static String Expired_Message="Expired";
     public static String evaluation_pending="Not evaluated";
@@ -24,6 +26,7 @@ public class utils extends BaseUtil
     public static int Signup_Email_length=9;
     public static String password="abhi1234";
     public static String google_email="testAppLearnyst@gmail.com";
+    public static String invalid_email="qweraxdcehavskdhva23211w@gmail.com";
     public static String google_password="learnyst***";
     public static String Fb_Password= "karaokegarage";
     public static String homepage_URL="https://learnnew.learnyst.com/learn";
@@ -143,7 +146,7 @@ public class utils extends BaseUtil
 
     protected static String randomCoupon()
     {
-        String selectCoupon[] = {"fifty","yeast","sixty","expired"};
+        String selectCoupon[] = {"fifty","sixty"};
         Random generator = new Random();
         int randomIndex = generator.nextInt(selectCoupon.length);
         return selectCoupon[randomIndex];

@@ -1,15 +1,18 @@
 package Steps;
 
+import Base.BaseUtil;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;
 
 import static Base.utils.*;
 import static Objects.CourseOverview_repo.Coupon_error;
+import static Objects.CourseOverview_repo.enterCoupon;
 import static Objects.CourseSyllabus_repo.*;
 import static Objects.GST_MockTest_repo.*;
 import static Objects.checkoutPage_repo.*;
@@ -18,8 +21,7 @@ import static Objects.payment_repo.*;
 public class CheckoutPageSceanrios
 {
     public static int coursePrice_courseDetail;
-    public static int TotalPayableAMount;
-
+    private static int TotalPayableAMount;
     @Given("^I navigated to signup page for GST enable school$")
     public void iNavigatedToSignupPageForGSTEnableSchool()
     {
@@ -119,5 +121,31 @@ public class CheckoutPageSceanrios
     public void userAbleToSeeTheRefundPolicy() throws InterruptedException {
         Thread.sleep(AddShortDelay);
         Assert.assertEquals(true,refundPolicy().isDisplayed());
+    }
+
+    @Then("^user able to see error message on entering invalid coupon$")
+    public void userAbleToSeeErrorMessageOnEnteringInvalidCoupon() {
+        if (Coupon_error().isDisplayed())
+        {
+            Coupon_error().getText().equals(Coupon_errorMessage);
+            Assert.assertEquals(true, (Integer.parseInt(GST_courseActualPrice().getText())) == (GST_actualPrice));
+        }
+    }
+
+    @And("^user able to enter the invalid coupon$")
+    public void userAbleToEnterTheInvalidCoupon() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        Assert.assertEquals(true,enterCoupon().isDisplayed());
+        enterCoupon().sendKeys(invalidCoupon);
+        Thread.sleep(AddShortDelay);
+    }
+
+    @And("^user able to enter the expired coupon$")
+    public void userAbleToEnterTheExpiredCoupon() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        Assert.assertEquals(true,enterCoupon().isDisplayed());
+        enterCoupon().sendKeys(expiredCoupon);
+        Thread.sleep(AddShortDelay);
+
     }
 }

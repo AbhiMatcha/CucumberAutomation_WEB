@@ -1,9 +1,6 @@
 package Steps;
-
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
-import gherkin.lexer.Th;
 import org.testng.Assert;
 
 import java.util.concurrent.TimeUnit;

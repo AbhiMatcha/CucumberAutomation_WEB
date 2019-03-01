@@ -1,6 +1,5 @@
 package Steps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 import static Base.utils.*;
 import static Objects.CourseCertificate_repo.*;
-//import static Objects.CourseOverview_repo.*;
 import static Objects.CourseOverview_repo.certificateTab;
 import static Objects.MockTest_repo.*;
 import static Objects.homeScreen_repo.*;
@@ -23,8 +21,8 @@ public class CertificateSceanrios
 {
     public static JavascriptExecutor js = (JavascriptExecutor) driver;
 
-    @And("^user should be able to select the course to test certificate$")
-    public void userShouldBeAbleToSelectTheCourseToTestCertificate() throws InterruptedException
+    @And("^user should be able to select the course$")
+    public void userShouldBeAbleToSelectTheCourse() throws InterruptedException
     {
         if(Course_verifyCertificate().isDisplayed())
         {
@@ -68,8 +66,8 @@ public class CertificateSceanrios
     }
 
     @And("^user able to select the test under certificate tab$")
-    public void userAbleToSelectTheTestUnderCertificateTab()
-    {
+    public void userAbleToSelectTheTestUnderCertificateTab() throws InterruptedException {
+        Thread.sleep(AddShortDelay);
         Assert.assertEquals(true,certificateTestLists().isDisplayed());
         certificateTestLists().click();
     }

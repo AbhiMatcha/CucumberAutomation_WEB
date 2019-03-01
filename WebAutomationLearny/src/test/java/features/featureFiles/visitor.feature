@@ -1,4 +1,4 @@
-Feature: visitor user feature
+Feature: visitor functionality
 
   This feature deals with the functionality of trail user in the application
 
@@ -169,7 +169,5 @@ Feature: visitor user feature
     Given user navigated to homepage of the school
 
     And user able to see the school name at the footer
-
-
 
 

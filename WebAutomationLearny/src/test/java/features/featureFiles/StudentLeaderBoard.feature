@@ -1,63 +1,8 @@
-Feature: LeaderBoard, CAT Test, Test deatils feature
+Feature: LeaderBoard feature
 
-  This feature deals with validating the test details, Scheduled test, Expired test & LeaderBoard functionality once user complete CAT test in the application
+  This feature deals with leaderboard information is same both in result page and leader board tab after taking test
 
-  Scenario: user able to see the test details
-
-    Given I navigated to signup page
-
-    And entered email with signup_email and Signup_Password
-
-    And I tapped on signUp for free button
-
-    Then user should signup or skip the verification
-
-    Given user navigated to offered courses
-
-    And user should be able to select the CAT MockTest
-
-    And user able to click enrol for free course button
-
-    And user able to see take test button
-
-    And user able to see live status of the test
-
-    And user able to see the test marks
-
-    Then Verify test marks contains some value
-
-    And user able to see the test minutes
-
-    Then verify test minutes contains some value
-
-    And user able to see the test level
-
-    Then verify test level contains some value
-
-  Scenario: user able to see the LeaderBoard details
-
-    Given I navigated to signup page
-
-    And entered email with signup_email and Signup_Password
-
-    And I tapped on signUp for free button
-
-    Then user should signup or skip the verification
-
-    Given user navigated to offered courses
-
-    And user should be able to select the CAT MockTest
-
-    Then user should be able to select the Leader board tab
-
-    And user able to see student name under leader board section
-
-    And user able to see Rank under leader board section
-
-    And user able to see score under leader board section
-
-
-  Scenario: user able to take the CAT Test
+  Scenario: user able to see his/her name in the leaderboard based on marks acquired after completing the Test
 
     Given I navigated to signup page
 

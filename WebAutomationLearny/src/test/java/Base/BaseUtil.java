@@ -8,5 +8,4 @@ public class BaseUtil
     public static String stepInfo;
     public static WebDriver driver;
     public static WebElement element;
-//    public static WebDriverWait wait = new WebDriverWait(driver,5);
 }

@@ -15,7 +15,7 @@ public class SignupScenarios {
     @Given("^I navigated to signup page$")
     public void iNavigatedToSignupPage() throws InterruptedException {
         driver.get(signup_URL);
-        Thread.sleep(AddShortDelay);
+        Thread.sleep(AddLongDelay);
     }
 
     @And("^user entered ([^\"]*) and ([^\"]*)$")

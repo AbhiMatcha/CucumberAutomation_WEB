@@ -15,6 +15,22 @@ public class CATquiz_testDetails_LeaderBoard_repo extends BaseUtil
         element = driver.findElement(By.id("24409"));
         return element;
     }
+    public static WebElement GeneralMockTest(){
+        /* using to Verify test details*/
+        element = driver.findElement(By.id("27898"));
+        return element;
+    }
+
+    public static WebElement DebugMockTest(){
+        /* using to Verify test details*/
+        element = driver.findElement(By.id("25380"));
+        return element;
+    }
+
+
+
+
+
 
 
     public static WebElement Student_cloumn() {

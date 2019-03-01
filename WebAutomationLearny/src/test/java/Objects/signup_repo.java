@@ -3,10 +3,7 @@ package Objects;
 import Base.BaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.ITestResult;
-
 import java.util.concurrent.TimeUnit;
-
 import static Base.utils.*;
 import static Objects.homeScreen_repo.*;
 

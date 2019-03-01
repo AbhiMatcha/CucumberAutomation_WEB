@@ -8,6 +8,7 @@ import org.testng.ITestResult;
 public class forgotPassword_repo extends BaseUtil
 {
     public static String ForgotPopMessage = "An email has been sent to your account's email address. Please check your email to continue.";
+    public static String forgotPassword_errorMessage="Email not found";
 
     public static WebElement forgot_PasswordEmail(){
         element = driver.findElement(By.xpath("//*[@id=\"js-resetPassword-form\"]/div[1]/center/input"));

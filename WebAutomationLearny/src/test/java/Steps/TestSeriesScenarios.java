@@ -6,6 +6,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import java.util.concurrent.TimeUnit;
 import static Base.utils.*;
+import static Objects.CATquiz_testDetails_LeaderBoard_repo.*;
 import static Objects.CourseOverview_repo.*;
 import static Objects.CourseSyllabus_repo.*;
 import static Objects.MockTest_repo.*;
@@ -259,4 +260,29 @@ public class TestSeriesScenarios
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true,solutions().isDisplayed());
     }
+
+    @And("^user able to select GeneralMockTest$")
+    public void userAbleToSelectGeneralMocktest() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertEquals(true, GeneralMockTest().isDisplayed());
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        GeneralMockTest().click();
+        Thread.sleep(AddShortDelay);
+
+    }
+
+    @And("^user able to select DebugMockTest$")
+    public void userAbleToSelectDebugMocktest() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertEquals(true, DebugMockTest().isDisplayed());
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        DebugMockTest().click();
+        Thread.sleep(AddShortDelay);
+
+    }
+
+
+
+
+
 }
