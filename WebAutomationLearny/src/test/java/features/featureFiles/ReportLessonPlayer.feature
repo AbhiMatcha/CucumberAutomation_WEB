@@ -10,7 +10,7 @@ Feature: report feature in lesson player
 
     And I clicked login button
 
-    Then User should login and can see profile
+    Then User should be able to see profile
 
     And user able to select bundle
 
@@ -20,7 +20,7 @@ Feature: report feature in lesson player
 
     Then user able to select first lesson under syllabus tab
 
-    And user able to selecte video Lesson in syllabus section
+    And user able to select video Lesson in syllabus section
 
     Then user able to play the video
 

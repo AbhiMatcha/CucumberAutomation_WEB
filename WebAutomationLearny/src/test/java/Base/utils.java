@@ -66,6 +66,15 @@ public class utils extends BaseUtil
         return selectAnswer[randomIndex];
     }
 
+    public static String video_quality()
+    {
+        String selectAnswer[] = { "vjs-menu-item   ","vjs-menu-item    ","vjs-menu-item   vjs-selected"};
+        Random generator = new Random();
+        int randomIndex = generator.nextInt(selectAnswer.length);
+        return selectAnswer[randomIndex];
+    }
+
+
     public static String Review_by_User()
     {
         String selectAnswer[] = { "This is my feedback and it is good","I wont give","please go","why u need ?"};

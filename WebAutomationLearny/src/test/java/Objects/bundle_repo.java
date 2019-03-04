@@ -4,6 +4,7 @@ import Base.BaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static Base.utils.video_quality;
 import static Base.utils.video_speed;
 
 public class bundle_repo extends BaseUtil
@@ -61,8 +62,19 @@ public class bundle_repo extends BaseUtil
         return element;
     }
 
+    public static WebElement select_Quality_video(){
+        element = driver.findElement(By.className("vjs-icon-cog"));
+        return element;
+    }
+
     public static WebElement select_random_PlaySpeed_video(){
         element = driver.findElement(By.xpath("//*[@class='vjs-menu-item' and contains(text(),'"+video_speed()+"')]"));
+        return element;
+    }
+
+    public static WebElement select_random_Quality_video(){
+        element = driver.findElement(By.className("vjs-menu-item    "));
+        System.out.println(element);
         return element;
     }
 

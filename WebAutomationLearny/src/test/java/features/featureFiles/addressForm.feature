@@ -36,3 +36,32 @@ Feature: address form feature in checkout page for GST enabled
 
     And user able to save the details entered in the address form
 
+  Scenario: user able to fill the form when he/she signup
+
+    Given I navigated to signup page
+
+    And entered email with signup_email and Signup_Password
+
+    And I tapped on signUp for free button
+
+    Then user able to enter name
+
+    Then user able to enter phone number
+
+    Then user able to enter place
+
+    Then user able to enter city
+
+    Then user able to enter state
+
+    Then user able to enter country
+
+    Then user able to enter institute
+
+    Then user able to enter Mobile number
+
+    Then user able to save the details
+
+    Then User should be able to see profile
+
+

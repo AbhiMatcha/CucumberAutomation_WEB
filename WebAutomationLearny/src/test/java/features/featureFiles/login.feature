@@ -18,7 +18,7 @@ Feature: user using Login Functionality
 
     And I clicked login button
 
-    Then User should login and can see profile
+    Then User should be able to see profile
 
   Scenario Outline: user able to see error messages in login page on entering invalid inputs
 

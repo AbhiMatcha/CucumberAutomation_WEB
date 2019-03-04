@@ -23,7 +23,7 @@ public class login_repo extends BaseUtil
 
     public static WebElement login_email()
     {
-        element = driver.findElement(By.id("lernystLogin_new_user_user_email"));
+        element = driver.findElement(By.id("lernystLogin_new_user_user_emai"));
         return element;
     }
 

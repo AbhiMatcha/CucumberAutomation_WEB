@@ -27,7 +27,7 @@ Feature: mock test details feature
 
     And I clicked login button
 
-    Then User should login and can see profile
+    Then User should be able to see profile
 
     And user should be able to select the CAT MockTest
 
@@ -42,7 +42,7 @@ Feature: mock test details feature
 
     And I clicked login button
 
-    Then User should login and can see profile
+    Then User should be able to see profile
 
     And user should be able to select the CAT MockTest
 

@@ -141,25 +141,6 @@ public class homeScreen_repo extends BaseUtil
 
         if(inputMobileNumber().isDisplayed())
         {
-            inputName().click();
-            inputName().sendKeys(name);
-            inputPhoneNumber().click();
-            inputPhoneNumber().sendKeys(MobileNumber);
-            inputPlace().click();
-            inputPlace().sendKeys(place);
-            inputCity().click();
-            inputCity().sendKeys(city);
-            inputState().click();
-            inputState().sendKeys(state);
-            inputCountry().click();
-            inputCountry().sendKeys(country);
-            inputInstitute().click();
-            inputInstitute().sendKeys(institute);
-            inputMobileNumber().click();
-            inputMobileNumber().sendKeys(MobileNumber);
-            Thread.sleep(3000);
-            SubmitinputMobileNumber().click();
-            Thread.sleep(3000);
         }
     }
 

@@ -77,7 +77,7 @@ public class SignupScenarios {
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         Assert.assertEquals(pop_up().isDisplayed(),true);
         pop_up().getText().equals(errorMessage);
-        Thread.sleep(5000);
+        Thread.sleep(AddShortDelay);
 
     }
 

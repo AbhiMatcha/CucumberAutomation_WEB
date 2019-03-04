@@ -10,7 +10,7 @@ Feature: Download certificate by taking test
 
     And I clicked login button
 
-    Then User should login and can see profile
+    Then User should be able to see profile
 
     And user should be able to select the course
 

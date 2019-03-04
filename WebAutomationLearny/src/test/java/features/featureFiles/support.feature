@@ -10,7 +10,7 @@ Feature: Support feature
 
     And I clicked login button
 
-    Then User should login and can see profile
+    Then User should be able to see profile
 
     And user able to see the support option
 
@@ -30,4 +30,4 @@ Feature: Support feature
 
     And user should be able to confrim the submission of the raised ticket
 
-    Then User should login and can see profile
+    Then User should be able to see profile

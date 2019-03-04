@@ -2,6 +2,7 @@ package Steps;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
+import gherkin.lexer.Th;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
@@ -30,7 +31,6 @@ public class BundleScenarios {
     public void userAbleToPlayTheVideo() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         playVidoeButton().click();
-        Thread.sleep(AddShortDelay);
     }
 
     @Then("^user able to select first lesson under syllabus tab$")
@@ -58,6 +58,7 @@ public class BundleScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, PDF_zoomIn().isDisplayed());
         PDF_zoomIn().click();
+        Thread.sleep(AddShortDelay);
 
     }
 
@@ -66,7 +67,6 @@ public class BundleScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, PDF_zoomOut().isDisplayed());
         PDF_zoomOut().click();
-
     }
 
     @Then("^user able to click bookmark option$")
@@ -74,7 +74,6 @@ public class BundleScenarios {
         Thread.sleep(AddShortDelay);
         Assert.assertEquals(true, PDF_bookMark().isDisplayed());
         PDF_bookMark().click();
-
     }
 
     @Then("^user able to click toggle option$")
@@ -82,7 +81,6 @@ public class BundleScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, PDF_toggle().isDisplayed());
         PDF_toggle().click();
-
     }
 
     @Then("^user able to click thumbnail option$")
@@ -90,7 +88,6 @@ public class BundleScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, PDF_thumbNail().isDisplayed());
         PDF_thumbNail().click();
-
     }
 
     @Then("^user able to see total pages$")
@@ -98,7 +95,6 @@ public class BundleScenarios {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, PDF_totalPages().isDisplayed());
         PDF_totalPages().click();
-
     }
 
     @Then("^user able to click find option$")
@@ -268,5 +264,25 @@ public class BundleScenarios {
 //        System.out.println("***************");
 //        System.out.println(result == finalTimeVideo);
 //        Thread.sleep(AddLongDelay);
+    }
+
+    @Then("^user able to change the quality of the video$")
+    public void userAbleToChangeTheQualityOfTheVideo() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        select_random_Quality_video().click();
+        Thread.sleep(AddLongDelay);
+    }
+
+    @Then("^user able to select option to change quality$")
+    public void userAbleToSelectOptionToChangeQuality() throws InterruptedException {
+        Actions action = new Actions(driver);
+        action.moveToElement(select_Quality_video()).perform();
+        select_Quality_video().click();
+        Thread.sleep(1000);
+
+    }
+
+    @Then("^user able to play video in between$")
+    public void userAbleToPlayVideoInBetween() {
     }
 }

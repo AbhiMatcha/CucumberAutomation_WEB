@@ -54,8 +54,8 @@ public class LoginScenarios
         login_button().click();
     }
 
-    @Then("^User should login and can see profile$")
-    public void userShouldLoginAndCanSeeProfile()
+    @Then("^User should be able to see profile$")
+    public void userShouldBeAbleToSeeProfile()
     {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(profile_button().isDisplayed(),true);

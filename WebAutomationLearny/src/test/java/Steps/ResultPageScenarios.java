@@ -83,8 +83,8 @@ public class ResultPageScenarios
     }
 
     @Then("^user able to restore the answered questions$")
-    public void userAbleToRestoreTheAnsweredQuestions()
-    {
+    public void userAbleToRestoreTheAnsweredQuestions() throws InterruptedException {
+        Thread.sleep(AddShortDelay);
         restoreAnswers().click();
     }
 
