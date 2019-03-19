@@ -68,8 +68,6 @@ Feature:  Discussion feature
 
     Then user should be able to select the discussion tab
 
-    When user able to select ask option in discussion
-
     Then user able to the edit option
 
     And user able to edit the input and post the question
@@ -91,8 +89,6 @@ Feature:  Discussion feature
     And user able to select course 'Fill in the blank'
 
     Then user should be able to select the discussion tab
-
-    When user able to select ask option in discussion
 
     And user able to see the reply option
 
@@ -162,7 +158,7 @@ Feature:  Discussion feature
 
     And user able to select course 'Fill in the blank'
 
-    Then user should be able to select the Notes tab
+    Then user should be able to select the discussion tab
 
     When user able to select ask option in discussion
 

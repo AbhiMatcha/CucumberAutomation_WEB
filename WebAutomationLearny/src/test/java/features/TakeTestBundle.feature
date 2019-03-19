@@ -65,6 +65,3 @@ Feature: take test feature in bundle
     And user able to click final submit
 
     And user able to solutions button after completing test
-
-
-t

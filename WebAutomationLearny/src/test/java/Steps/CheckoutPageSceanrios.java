@@ -125,9 +125,14 @@ public class CheckoutPageSceanrios
 
     @Then("^user able to see error message on entering invalid coupon$")
     public void userAbleToSeeErrorMessageOnEnteringInvalidCoupon() {
+        System.out.println(Coupon_error().isDisplayed());
         if (Coupon_error().isDisplayed())
         {
+            System.out.println(Coupon_error().getText());
+            System.out.println(Coupon_errorMessage);
             Coupon_error().getText().equals(Coupon_errorMessage);
+            System.out.println(Integer.parseInt(GST_courseActualPrice().getText()));
+            System.out.println(GST_actualPrice);
             Assert.assertEquals(true, (Integer.parseInt(GST_courseActualPrice().getText())) == (GST_actualPrice));
         }
     }

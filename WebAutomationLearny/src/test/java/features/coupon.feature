@@ -138,8 +138,7 @@ Feature: coupon feature for GST disabled school
 
     And user able to apply the coupon
 
-   Then user able to see error message on entering invalid coupon
-
+    Then user able to see error message or change in price after applying coupon
 
   Scenario: user able to see expired message on entering expired coupon
 
@@ -159,4 +158,4 @@ Feature: coupon feature for GST disabled school
 
     And user able to apply the coupon
 
-    Then user able to see error message on entering invalid coupon
+    Then user able to see error message or change in price after applying expired coupon

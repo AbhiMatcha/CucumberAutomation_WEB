@@ -68,7 +68,7 @@ public class utils extends BaseUtil
 
     public static String video_quality()
     {
-        String selectAnswer[] = { "vjs-menu-item   ","vjs-menu-item    ","vjs-menu-item   vjs-selected"};
+        String selectAnswer[] = {"//*[contains(text(),'240p')]","//*[contains(text(),'360p')]","//*[contains(text(),'Auto')]"};
         Random generator = new Random();
         int randomIndex = generator.nextInt(selectAnswer.length);
         return selectAnswer[randomIndex];

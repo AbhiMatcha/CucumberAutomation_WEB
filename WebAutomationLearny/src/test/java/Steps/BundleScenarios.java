@@ -31,6 +31,7 @@ public class BundleScenarios {
     public void userAbleToPlayTheVideo() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         playVidoeButton().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @Then("^user able to select first lesson under syllabus tab$")
@@ -206,7 +207,7 @@ public class BundleScenarios {
         Thread.sleep(AddShortDelay);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         confirm_send_Logs_Video().click();
-
+        Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to see video in full screen view$")
@@ -275,11 +276,11 @@ public class BundleScenarios {
 
     @Then("^user able to select option to change quality$")
     public void userAbleToSelectOptionToChangeQuality() throws InterruptedException {
+        Thread.sleep(AddShortDelay);
         Actions action = new Actions(driver);
         action.moveToElement(select_Quality_video()).perform();
         select_Quality_video().click();
-        Thread.sleep(1000);
-
+        Thread.sleep(AddShortDelay);
     }
 
     @Then("^user able to play video in between$")

@@ -1,16 +1,17 @@
 package Steps;
 
 import Objects.resultPage_repo;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import gherkin.lexer.Th;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
+
 import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
+
 import static Base.utils.*;
 import static Objects.CATquiz_testDetails_LeaderBoard_repo.*;
+import static Objects.CATquiz_testDetails_LeaderBoard_repo.TestDetails_liveStatus_afterTakingTest;
 import static Objects.CourseOverview_repo.*;
 import static Objects.IITjeeMain_repo.CancelrestoreAnswers;
 import static Objects.MockTest_repo.*;
@@ -18,8 +19,7 @@ import static Objects.homeScreen_repo.profile_button;
 import static Objects.quizRepo.*;
 import static Objects.student_repo.*;
 
-public class LeaderBoardScenarios
-{
+public class LeaderBoardScenarios {
     private static String userName;
     private LinkedList<String> Course_LeaderBoardMarkList = new LinkedList<>();
     private LinkedList<String> Course_LeaderBoardList = new LinkedList<>();
@@ -48,10 +48,11 @@ public class LeaderBoardScenarios
     }
 
     @And("^user able to see live status of the test$")
-    public void userAbleToSeeLiveStatusOfTheTest() {
+    public void userAbleToSeeLiveStatusOfTheTest() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertEquals(true, TestDetails_liveStatus().isDisplayed());
-
+        Assert.assertEquals(true, TestDetails_liveStatus_afterTakingTest().isDisplayed());
+        System.out.println(TestDetails_liveStatus_afterTakingTest().getText());
+        Assert.assertEquals(true, TestDetails_liveStatus_afterTakingTest().getText().equalsIgnoreCase("live"));
     }
 
     @And("^user able to see the test marks$")
@@ -134,17 +135,15 @@ public class LeaderBoardScenarios
     }
 
     @And("^user able to click start test button$")
-    public void userAbleToClickStartTestButton() throws InterruptedException
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToClickStartTestButton() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         startTest().click();
         Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to answer the first question in section one of CAT test$")
-    public void userAbleToAnswerTheFirstQuestionInSectionOneOfCATTest()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToAnswerTheFirstQuestionInSectionOneOfCATTest() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         mockTest_section1_Answer1().click();
     }
 
@@ -161,71 +160,65 @@ public class LeaderBoardScenarios
 
     @And("^user able to submit$")
     public void userAbleToSubmit() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         submitButton().click();
         Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to click final submit$")
     public void UserAÂbleToClickFinalSubmit() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         finalSubmit().click();
         Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to confirm the submit$")
     public void userAbleToConfirmTheSubmit() throws InterruptedException {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         confirmAlert().click();
         Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to answer the first question in second section of CAT test$")
-    public void userAbleToAnswerTheFirstQuestionInSecondSectionOfCATTest()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToAnswerTheFirstQuestionInSecondSectionOfCATTest() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         mockTest_section2_Answer1().click();
     }
 
     @Then("^user able to select calculator while taking the test$")
-    public void userAbleToSelectCalculatorWhileTakingTheTest()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToSelectCalculatorWhileTakingTheTest() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         calculator().click();
     }
 
     @And("^user able to perform multiplication of two values$")
-    public void userAbleToPerformMultiplicationOfTwoValues()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToPerformMultiplicationOfTwoValues() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         value1().click();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         multiplication().click();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         value1().click();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Equals().click();
     }
 
     @And("^user able to close the calculator$")
-    public void userAbleToCloseTheCalculator()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToCloseTheCalculator() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         closeCalculator().click();
     }
 
     @And("^user able to answer the first question in third section of CAT test$")
-    public void userAbleToAnswerTheFirstQuestionInThirdSectionOfCATTest()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToAnswerTheFirstQuestionInThirdSectionOfCATTest() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         mockTest_section3_Answer1().click();
     }
 
     @Then("^collect the details the top ten students in result page under leaderboard section$")
-    public void CollectTheDetailsTheTopTenStudentsInResultPageUnderLeaderboardSection() throws InterruptedException
-    {
+    public void CollectTheDetailsTheTopTenStudentsInResultPageUnderLeaderboardSection() throws InterruptedException {
         Thread.sleep(AddShortDelay);
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("scroll(1148,747);");
         Thread.sleep(AddShortDelay);
@@ -236,26 +229,23 @@ public class LeaderBoardScenarios
     }
 
     @And("^user able to see his/her name in the leader board section in result page$")
-    public void userAbleToSeeHisHerNameInTheLeaderBoardSectionInResultPage() throws InterruptedException
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToSeeHisHerNameInTheLeaderBoardSectionInResultPage() throws InterruptedException {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, (UserName_leaderBoard().getText()).equalsIgnoreCase(userName));
         Thread.sleep(AddShortDelay);
     }
 
     @And("^user able to navigate back to leaderBoard page in sales page$")
-    public void userAbleToNavigateBackToLeaderBoardPageInSalesPage()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void userAbleToNavigateBackToLeaderBoardPageInSalesPage() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.navigate().back();
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         TestDetails_LeaderBoardTab().click();
     }
 
     @And("^collect the details the top ten students in leaderboard section$")
-    public void collectTheDetailsTheTopTenStudentsInLeaderboardSection()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+    public void collectTheDetailsTheTopTenStudentsInLeaderboardSection() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         for (int i = 1; i <= 10; i++) {
             Course_LeaderBoardList.add(TestDetails_LeaderBoardList(i).getText());
             Course_LeaderBoardMarkList.add(TestDetails_LeaderBoardmarksList(i).getText());
@@ -263,11 +253,9 @@ public class LeaderBoardScenarios
     }
 
     @Then("^the details of top ten students should match both in result page and sales page$")
-    public void theDetailsOfTopTenStudentsShouldMatchBothInResultPageAndSalesPage()
-    {
-        driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-        for (int i = 1; i <= 10; i++)
-        {
+    public void theDetailsOfTopTenStudentsShouldMatchBothInResultPageAndSalesPage() {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        for (int i = 1; i <= 10; i++) {
             Assert.assertEquals(true, (Course_LeaderBoardList.get(i)).equalsIgnoreCase(ResultPage_LeaderBoardList.get(i)));
             Assert.assertEquals(true, (Course_LeaderBoardMarkList.get(i)).equalsIgnoreCase(ResultPage_LeaderBoardMarkList.get(i)));
         }
@@ -280,42 +268,36 @@ public class LeaderBoardScenarios
     }
 
     @And("^user able to see the expired message for particular mock test$")
-    public void userAbleToSeeTheExpiredMessageForParticularMockTest()
-    {
+    public void userAbleToSeeTheExpiredMessageForParticularMockTest() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, MockTest_scheduledTime_status().getText().equals(Expired_Message));
     }
 
     @And("^user should be able to select the scheduled mock test$")
-    public void userShouldBeAbleToSelectTheScheduledMockTest()
-    {
+    public void userShouldBeAbleToSelectTheScheduledMockTest() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         MockTest_scheduledTest().click();
     }
 
     @And("^user able to see the scheduled time for particular mock test$")
-    public void userAbleToSeeTheScheduledTimeForParticularMockTest()
-    {
+    public void userAbleToSeeTheScheduledTimeForParticularMockTest() {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, MockTest_scheduledTime_status().getText().equals(scheduledTime));
     }
 
     @And("^save the user name from profile$")
-    public void saveTheUserNameFromProfile() throws InterruptedException
-    {
+    public void saveTheUserNameFromProfile() throws InterruptedException {
         Thread.sleep(AddShortDelay);
-        userName=profile_button().getText();
+        userName = profile_button().getText();
     }
 
     @And("^user able to cancel the restoring answer option if it displays$")
-    public void userAbleToCancelTheRestoringAnswerOptionIfItDisplays()
-    {
+    public void userAbleToCancelTheRestoringAnswerOptionIfItDisplays() {
         try {
             if (CancelrestoreAnswers().isDisplayed()) {
                 CancelrestoreAnswers().click();
             }
-        }catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("");
         }
 

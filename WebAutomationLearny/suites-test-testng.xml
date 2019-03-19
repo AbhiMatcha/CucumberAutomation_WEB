@@ -9,7 +9,7 @@
 
         <classes>
 
-            <class name="features.TestRunner" />
+            <class name="TestRunner" />
 
         </classes>
 

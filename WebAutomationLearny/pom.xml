@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -30,6 +29,20 @@
 
         </dependency>
 
+
+        <dependency>
+
+            <groupId>info.cukes</groupId>
+
+            <artifactId>cucumber-core</artifactId>
+
+            <version>1.2.5</version>
+
+            <scope>test</scope>
+
+        </dependency>
+
+
         <dependency>
 
             <groupId>info.cukes</groupId>
@@ -46,9 +59,11 @@
 
             <groupId>info.cukes</groupId>
 
-            <artifactId>cucumber-core</artifactId>
+            <artifactId>cucumber-testng</artifactId>
 
             <version>1.2.5</version>
+
+            <scope>test</scope>
 
         </dependency>
 
@@ -56,11 +71,14 @@
 
             <groupId>info.cukes</groupId>
 
-            <artifactId>cucumber-testng</artifactId>
+            <artifactId>cucumber-jvm-deps</artifactId>
 
-            <version>1.2.5</version>
+            <version>1.0.5</version>
+
+            <scope>test</scope>
 
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
         <dependency>
@@ -252,7 +270,7 @@
 
                         <property>
 
-                            <name>junit</name>
+                            <name>TestRunner</name>
 
                             <value>true</value>
 
@@ -264,7 +282,7 @@
 
                     <includes>
 
-                        <include>${basedir}/src/test/java/features/TestRunner.java</include>
+                        <exclude>${basedir}/src/test/java/TestRunner.java</exclude>
 
                     </includes>
 
@@ -320,9 +338,9 @@
 
                         <configuration>
 
-                            <projectName>cucumber-jvm-example</projectName>
+                            <projectName>WebAutomationLearny</projectName>
 
-                            <outputDirectory>${basedir}/target/site/cucumber-reports</outputDirectory>
+                            <outputDirectory>${basedir}/Reports/site/cucumber-reports</outputDirectory>
 
                             <cucumberOutput>${basedir}/target/cucumber.json</cucumberOutput>
 
@@ -338,90 +356,8 @@
 
             </plugin>
 
-            <plugin>
-
-                <groupId>ch.fortysix</groupId>
-
-                <artifactId>maven-postman-plugin</artifactId>
-
-                <version>0.1.6</version>
-
-                <executions>
-
-                    <execution>
-
-                        <id>send a mail</id>
-
-                        <phase>test</phase>
-
-                        <goals>
-
-                            <goal>send-mail</goal>
-
-                        </goals>
-
-                        <inherited>false</inherited>
-
-                        <configuration>
-                            <!--<skip>false</skip>-->
-                            <htmlMessageFile>${basedir}/target/site/cucumber-reports/report.html</htmlMessageFile>
-
-                            <!-- From Email address -->
-                            <from>learnystautomationreports@gmail.com</from>
-
-                            <!--  Email subject -->
-                            <subject>Test Automation Report</subject>
-
-                            <textMessage> Please download the file and fix if anything failed </textMessage>
-
-                            <!-- Fail the build if the mail doesnt reach -->
-                            <failonerror>true</failonerror>
-
-                            <!-- host -->
-                            <mailhost>smtp.gmail.com</mailhost>
-                            <!-- port of the host -->
-                            <mailport>465</mailport>
-
-                            <mailssl>true</mailssl>
-
-                            <mailAltConfig>true</mailAltConfig>
-
-                            <!-- Email Authentication(USername and Password) -->
-                            <mailuser>learnystautomationreports@gmail.com</mailuser>
-
-                            <mailpassword>elearning</mailpassword>
-
-                            <receivers>
-                                <!-- To Email address -->
-                                <receiver>abhishek.matcha@learnyst.com</receiver>
-                                <!--<receiver>shankar@learnyst.com</receiver>-->
-
-                            </receivers>
-
-                            <fileSets>
-
-                                <fileSet>
-                                    <!-- Report directory Path -->
-                                    <directory>${basedir}/target/site/cucumber-reports/</directory>
-
-                                    <includes>
-                                        <!-- Report file name -->
-                                        <include>report.html</include>
-                                    </includes>
-                                    <!-- Use Regular Expressions like **/*.html if you want all the html files to send-->
-                                </fileSet>
-
-                            </fileSets>
-
-                        </configuration>
-
-                    </execution>
-
-                </executions>
-
-            </plugin>
-
         </plugins>
+
     </build>
 
 </project>

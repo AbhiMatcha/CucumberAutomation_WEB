@@ -154,11 +154,11 @@ public class courseDetailsScenarios
     }
 
     @Then("^user should be able to select the Certificate tab$")
-    public void userShouldBeAbleToSelectTheCertificateTab()
-    {
+    public void userShouldBeAbleToSelectTheCertificateTab() throws InterruptedException {
         driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
         Assert.assertEquals(true, certificateTab().isDisplayed());
         certificateTab().click();
+        Thread.sleep(AddShortDelay);
     }
 
     @When("^user able to select download certificate option in certificate section$")
@@ -210,7 +210,24 @@ public class courseDetailsScenarios
         Thread.sleep(AddShortDelay);
         if (Coupon_error().isDisplayed())
         {
-            Assert.assertEquals(true,Coupon_error().getText().equals(Coupon_errorMessage));
+            Assert.assertEquals(true,Coupon_error().getText().equals(Coupon_errorMessage)||Coupon_error().getText().equals(Coupon_expiredMessage));
+        }
+        if((Integer.parseInt(courseDiscountPrice().getText())) != (MockTest_discountPrice))
+        {
+            int result = PriceCalculator(MockTest_discountPrice);
+            Assert.assertEquals(true, (Integer.parseInt(courseDiscountPrice().getText()) == result));
+        }
+
+    }
+
+
+    @Then("^user able to see error message or change in price after applying expired coupon$")
+    public void userAbleToSeeErrorMessageOrChangeInPriceAfterApplyingExpiredCoupon() throws InterruptedException
+    {
+        Thread.sleep(AddShortDelay);
+        if (Coupon_error().isDisplayed())
+        {
+            Assert.assertEquals(true,Coupon_error().getText().equals(Coupon_expiredMessage));
         }
         if((Integer.parseInt(courseDiscountPrice().getText())) != (MockTest_discountPrice))
         {

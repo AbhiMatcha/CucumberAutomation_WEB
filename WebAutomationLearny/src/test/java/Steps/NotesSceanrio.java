@@ -48,10 +48,6 @@ public class NotesSceanrio {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, select_link().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertEquals(true, select_mathEquation().isDisplayed());
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        Assert.assertEquals(true, select_preview().isDisplayed());
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, postInput().isDisplayed());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         Assert.assertEquals(true, cancelInput().isDisplayed());

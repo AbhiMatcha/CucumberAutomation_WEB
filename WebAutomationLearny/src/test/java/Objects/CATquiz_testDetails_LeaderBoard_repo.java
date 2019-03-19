@@ -89,6 +89,12 @@ public class CATquiz_testDetails_LeaderBoard_repo extends BaseUtil
         return element;
     }
 
+    public static WebElement TestDetails_liveStatus_afterTakingTest(){
+        element = driver.findElement(By.xpath("//*[@id='js-firstAttempt-score']/div/div[1]/div[1]/p[1]/span"));
+        return element;
+    }
+
+
     public static WebElement TestDetails_LeaderBoardTab(){
         element = driver.findElement(By.xpath("//*[@id='js-myTabs']/li[2]/a"));
         return element;

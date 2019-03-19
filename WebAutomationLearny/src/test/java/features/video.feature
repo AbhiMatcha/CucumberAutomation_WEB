@@ -78,29 +78,29 @@ Feature: video feature
 
     And user able to see video in full screen view
 
-  Scenario: user able to see the remaining time of the video
-
-    Given I navigate to login page
-
-    And In login page user entered login username and login password
-
-    And I clicked login button
-
-    Then User should be able to see profile
-
-    And user able to select bundle
-
-    And user able to select the courses tab
-
-    And user able to select course 'Verify_CourseVideo_Test'
-
-    Then user able to select first lesson under syllabus tab
-
-    And user able to select video Lesson in syllabus section
-
-    Then user able to play the video
-
-    And user able to see the remaining time of the video
+#  Scenario: user able to see the remaining time of the video
+#
+#    Given I navigate to login page
+#
+#    And In login page user entered login username and login password
+#
+#    And I clicked login button
+#
+#    Then User should be able to see profile
+#
+#    And user able to select bundle
+#
+#    And user able to select the courses tab
+#
+#    And user able to select course 'Verify_CourseVideo_Test'
+#
+#    Then user able to select first lesson under syllabus tab
+#
+#    And user able to select video Lesson in syllabus section
+#
+#    Then user able to play the video
+#
+#    And user able to see the remaining time of the video
 
   Scenario: user able to play the video in between
 

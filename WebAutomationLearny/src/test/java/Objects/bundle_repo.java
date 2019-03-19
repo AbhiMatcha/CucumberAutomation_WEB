@@ -4,8 +4,7 @@ import Base.BaseUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static Base.utils.video_quality;
-import static Base.utils.video_speed;
+import static Base.utils.*;
 
 public class bundle_repo extends BaseUtil
 {
@@ -72,9 +71,10 @@ public class bundle_repo extends BaseUtil
         return element;
     }
 
-    public static WebElement select_random_Quality_video(){
-        element = driver.findElement(By.className("vjs-menu-item    "));
+    public static WebElement select_random_Quality_video() throws InterruptedException {
+        element = driver.findElement(By.xpath(video_quality()));
         System.out.println(element);
+        Thread.sleep(AddShortDelay);
         return element;
     }
 
