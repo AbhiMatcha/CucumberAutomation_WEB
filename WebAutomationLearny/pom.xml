@@ -29,6 +29,17 @@
 
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+        <dependency>
+
+            <groupId>org.seleniumhq.selenium</groupId>
+
+            <artifactId>selenium-support</artifactId>
+
+            <version>3.141.59</version>
+
+        </dependency>
+
 
         <dependency>
 
@@ -54,6 +65,18 @@
             <scope>test</scope>
 
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.github.mkolisnyk/cucumber-runner -->
+        <dependency>
+
+            <groupId>com.github.mkolisnyk</groupId>
+
+            <artifactId>cucumber-runner</artifactId>
+
+            <version>1.3.5</version>
+
+        </dependency>
+
 
         <dependency>
 
@@ -183,6 +206,13 @@
 
             <version>3.4.0</version>
 
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20180813</version>
         </dependency>
 
         <dependency>
@@ -340,7 +370,7 @@
 
                             <projectName>WebAutomationLearny</projectName>
 
-                            <outputDirectory>${basedir}/Reports/site/cucumber-reports</outputDirectory>
+                            <outputDirectory>target/Reports/site/cucumber-reports</outputDirectory>
 
                             <cucumberOutput>${basedir}/target/cucumber.json</cucumberOutput>
 
@@ -355,6 +385,35 @@
                 </executions>
 
             </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>com.github.temyers</groupId>-->
+<!--                <artifactId>cucumber-jvm-parallel-plugin</artifactId>-->
+<!--                <version>1.2.1</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>generateRunners</id>-->
+<!--                        <phase>generate-test-sources</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>generateRunners</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <glue>com.mycompany.commonapps.queuemanager</glue>-->
+<!--                            <outputDirectory>${project.build.directory}/generated-test-sources</outputDirectory>-->
+<!--                            <featuresDirectory>${project.build.directory}/classes/active/</featuresDirectory>-->
+<!--                            <cucumberOutputDir>${project.build.directory}</cucumberOutputDir>-->
+<!--                            <format>json</format>-->
+<!--                            &lt;!&ndash;<strict>true</strict>-->
+<!--                            <monochrome>true</monochrome>-->
+<!--                            <useTestNG>false</useTestNG>-->
+<!--                            <namingScheme>simple</namingScheme>&ndash;&gt;-->
+<!--                            <parallelScheme>FEATURE</parallelScheme>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+
+
 
         </plugins>
 

@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Cucumber_WEB" />
-        <module name="LearnyMobile" />
+        <module name="WebAutomationLearny" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="WebAutomationLearny" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
